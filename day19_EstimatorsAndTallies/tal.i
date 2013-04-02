@@ -31,17 +31,17 @@ print 110 170
 nps 10000
 C Tally Specifications
 c neutron surface flux
-F12:n 1.2
-F22:n 2.5
+F12:n 1.2 $ Cyl top crossing
+F22:n 2.5 $ Box top crossing
 SD22 400
-F32:n 2.1 2.2 2.3 2.4 2.5 1.3 T
+F32:n 2.1 2.2 2.3 2.4 2.5 1.3 T $ Leaving the box
 SD32 400 400 400 400 400 400 2400
 c photon fluence
-F14:p 2
-F102:p 2.5
+F14:p 2     $ In box
+F102:p 2.5  $ Box top
 SD102 400
 c photon point
-F5:p 0 0 30
+F5:p 0 0 30 $ Point (0,0,30)
 C Data Cards end then recommended blank line
 
 Eveything after this point is ignored by MCNP
