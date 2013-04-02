@@ -1,0 +1,305 @@
+          Thread Name & Version = MCNP5, 1.60
+                                  _                                      
+            ._ _    _  ._   ._   |_                                      
+            | | |  (_  | |  |_)   _)                                     
+                            |                                            
+  +---------------------------------------------------------------------+
+  | Copyright 2010. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Los Energy. The Government is granted for itself and  |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2010, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 5     ld=09282010                     03/05/13 16:08:27 
+ *************************************************************************                 probid =  03/05/13 16:08:27 
+ i=sdef5.i                                                                       
+
+         1-       title card goes here                                                            
+         2-       C Cell cards                                                                    
+         3-       1 0    -1                                                                       
+         4-       2 0    -2                                                                       
+         5-       3 0    -3                                                                       
+         6-       4 0    -4                                                                       
+         7-       5 0    -5                                                                       
+         8-       6 0    -6                                                                       
+         9-       7 0     1 2 3 4 5 6 -7                                                          
+        10-       8 0     7                                                                       
+        11-                                                                                       
+        12-       C Surface cards                                                                 
+        13-       1 S 5      0      0   0.2  $ small sphere @  0 degrees R=5                      
+  warning.  this surface has been replaced by a surface of type sx
+        14-       2 S 4.330  2.500  0   0.2  $ small sphere @ 30 degrees R=5                      
+        15-       3 S 2.500  4.330  0   0.2  $ small sphere @ 60 degrees R=5                      
+        16-       4 S 0      5      0   0.2  $ small sphere @ 90 degrees R=5                      
+  warning.  this surface has been replaced by a surface of type sy
+        17-       5 S 3.536 -3.536  0   0.2  $ small sphere @-45 degrees R=5                      
+        18-       6 s 0      0      0   0.2                                                       
+  warning.  this surface has been replaced by a surface of type so
+        19-       7 so 25                                                                         
+        20-                                                                                       
+        21-       C Data cards                                                                    
+        22-       IMP:N 1 6R 0                                                                    
+        23-       NPS 10000000                                                                    
+        24-       f4:n 1 4i 6                                                                     
+        25-       fq4 F E                                                                         
+        26-       sdef POS=D1 VEC=FPOS=D2 DIR=0                                                   
+        27-       SI1 L 5 0 0   4.33 2.5 0    2.5 4.33 0    0 5 0     3.536 -3.536 0              
+        28-       SP1 D   1          1            1           1              1                    
+        29-       DS2 L -5 0 0  -4.33 -2.5 0  -2.5 -4.33 0  0 -5 0    -3.536 -3.536 0             
+        30-       PRINT 110                                                                       
+ 
+  warning.  no cross-section tables are called for in this problem.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
+
+        1        1        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        2        2        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        3        3        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        4        4        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        6        6        0  0.00000E+00 0.00000E+00 3.35103E-02 0.00000E+00           1  1.0000E+00                                   
+        7        7        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  1.0000E+00                                   
+        8        8        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               2.01062E-01 0.00000E+00
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         4 warning messages so far.
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file runtpf     nps =           0     coll =              0     ctm =        0.00   nrn =             
+    0
+
+         4 warning messages so far.
+1   starting mcrun.      cp0 =  0.00         print table 110
+
+      title card goes here                                                            
+
+
+     nps    x          y          z          cell       surf     u          v          w        energy     weight     time
+ 
+      1  0.000E+00  5.000E+00  0.000E+00        4          0  6.055E-01  0.000E+00 -7.958E-01  1.400E+01  1.000E+00  0.000E+00
+      2  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00 -9.943E-01  1.070E-01  1.400E+01  1.000E+00  0.000E+00
+      3  0.000E+00  5.000E+00  0.000E+00        4          0 -2.509E-01  0.000E+00  9.680E-01  1.400E+01  1.000E+00  0.000E+00
+      4  4.330E+00  2.500E+00  0.000E+00        2          0 -4.166E-02  7.216E-02  9.965E-01  1.400E+01  1.000E+00  0.000E+00
+      5  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00 -1.665E-01 -9.860E-01  1.400E+01  1.000E+00  0.000E+00
+      6  2.500E+00  4.330E+00  0.000E+00        3          0  3.029E-01 -1.749E-01 -9.368E-01  1.400E+01  1.000E+00  0.000E+00
+      7  2.500E+00  4.330E+00  0.000E+00        3          0  8.585E-01 -4.957E-01 -1.312E-01  1.400E+01  1.000E+00  0.000E+00
+      8  0.000E+00  5.000E+00  0.000E+00        4          0 -6.004E-01  0.000E+00  7.997E-01  1.400E+01  1.000E+00  0.000E+00
+      9  0.000E+00  5.000E+00  0.000E+00        4          0 -4.924E-01  0.000E+00  8.704E-01  1.400E+01  1.000E+00  0.000E+00
+     10  4.330E+00  2.500E+00  0.000E+00        2          0 -1.850E-01  3.204E-01 -9.290E-01  1.400E+01  1.000E+00  0.000E+00
+     11  4.330E+00  2.500E+00  0.000E+00        2          0  4.950E-01 -8.573E-01  1.419E-01  1.400E+01  1.000E+00  0.000E+00
+     12  4.330E+00  2.500E+00  0.000E+00        2          0  4.837E-01 -8.377E-01 -2.535E-01  1.400E+01  1.000E+00  0.000E+00
+     13  4.330E+00  2.500E+00  0.000E+00        2          0  4.608E-01 -7.982E-01 -3.881E-01  1.400E+01  1.000E+00  0.000E+00
+     14  4.330E+00  2.500E+00  0.000E+00        2          0 -7.724E-02  1.338E-01  9.880E-01  1.400E+01  1.000E+00  0.000E+00
+     15  3.536E+00 -3.536E+00  0.000E+00        5          0 -5.708E-01  5.708E-01 -5.902E-01  1.400E+01  1.000E+00  0.000E+00
+     16  3.536E+00 -3.536E+00  0.000E+00        5          0  4.451E-01 -4.451E-01 -7.770E-01  1.400E+01  1.000E+00  0.000E+00
+     17  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00  9.062E-01 -4.228E-01  1.400E+01  1.000E+00  0.000E+00
+     18  0.000E+00  5.000E+00  0.000E+00        4          0  7.161E-01  0.000E+00  6.980E-01  1.400E+01  1.000E+00  0.000E+00
+     19  2.500E+00  4.330E+00  0.000E+00        3          0 -8.659E-01  5.000E-01 -1.553E-02  1.400E+01  1.000E+00  0.000E+00
+     20  3.536E+00 -3.536E+00  0.000E+00        5          0 -4.203E-01  4.203E-01  8.042E-01  1.400E+01  1.000E+00  0.000E+00
+     21  3.536E+00 -3.536E+00  0.000E+00        5          0  7.059E-01 -7.059E-01 -5.801E-02  1.400E+01  1.000E+00  0.000E+00
+     22  2.500E+00  4.330E+00  0.000E+00        3          0  8.614E-01 -4.974E-01  1.027E-01  1.400E+01  1.000E+00  0.000E+00
+     23  0.000E+00  5.000E+00  0.000E+00        4          0 -8.450E-01  0.000E+00  5.348E-01  1.400E+01  1.000E+00  0.000E+00
+     24  0.000E+00  5.000E+00  0.000E+00        4          0  3.435E-01  0.000E+00  9.392E-01  1.400E+01  1.000E+00  0.000E+00
+     25  0.000E+00  5.000E+00  0.000E+00        4          0 -5.058E-03  0.000E+00 -1.000E+00  1.400E+01  1.000E+00  0.000E+00
+     26  4.330E+00  2.500E+00  0.000E+00        2          0  4.315E-01 -7.473E-01  5.054E-01  1.400E+01  1.000E+00  0.000E+00
+     27  0.000E+00  5.000E+00  0.000E+00        4          0  6.991E-01  0.000E+00 -7.150E-01  1.400E+01  1.000E+00  0.000E+00
+     28  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00 -9.387E-01 -3.448E-01  1.400E+01  1.000E+00  0.000E+00
+     29  4.330E+00  2.500E+00  0.000E+00        2          0 -4.849E-01  8.399E-01  2.439E-01  1.400E+01  1.000E+00  0.000E+00
+     30  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00 -5.761E-01  8.173E-01  1.400E+01  1.000E+00  0.000E+00
+     31  0.000E+00  5.000E+00  0.000E+00        4          0  9.076E-02  0.000E+00  9.959E-01  1.400E+01  1.000E+00  0.000E+00
+     32  4.330E+00  2.500E+00  0.000E+00        2          0 -3.661E-01  6.341E-01  6.811E-01  1.400E+01  1.000E+00  0.000E+00
+     33  4.330E+00  2.500E+00  0.000E+00        2          0 -4.640E-01  8.037E-01 -3.725E-01  1.400E+01  1.000E+00  0.000E+00
+     34  3.536E+00 -3.536E+00  0.000E+00        5          0  4.703E-01 -4.703E-01  7.468E-01  1.400E+01  1.000E+00  0.000E+00
+     35  3.536E+00 -3.536E+00  0.000E+00        5          0  6.967E-01 -6.967E-01  1.707E-01  1.400E+01  1.000E+00  0.000E+00
+     36  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00  4.488E-01  8.936E-01  1.400E+01  1.000E+00  0.000E+00
+     37  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00  3.938E-01 -9.192E-01  1.400E+01  1.000E+00  0.000E+00
+     38  2.500E+00  4.330E+00  0.000E+00        3          0 -6.426E-01  3.710E-01  6.703E-01  1.400E+01  1.000E+00  0.000E+00
+     39  4.330E+00  2.500E+00  0.000E+00        2          0 -3.602E-01  6.238E-01 -6.936E-01  1.400E+01  1.000E+00  0.000E+00
+     40  4.330E+00  2.500E+00  0.000E+00        2          0 -4.079E-01  7.064E-01 -5.784E-01  1.400E+01  1.000E+00  0.000E+00
+     41  4.330E+00  2.500E+00  0.000E+00        2          0 -4.170E-01  7.222E-01  5.518E-01  1.400E+01  1.000E+00  0.000E+00
+     42  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00  1.885E-01  9.821E-01  1.400E+01  1.000E+00  0.000E+00
+     43  3.536E+00 -3.536E+00  0.000E+00        5          0 -1.864E-01  1.864E-01 -9.646E-01  1.400E+01  1.000E+00  0.000E+00
+     44  0.000E+00  5.000E+00  0.000E+00        4          0  9.822E-01  0.000E+00  1.880E-01  1.400E+01  1.000E+00  0.000E+00
+     45  4.330E+00  2.500E+00  0.000E+00        2          0 -4.734E-01  8.200E-01  3.218E-01  1.400E+01  1.000E+00  0.000E+00
+     46  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00  9.182E-01  3.962E-01  1.400E+01  1.000E+00  0.000E+00
+     47  3.536E+00 -3.536E+00  0.000E+00        5          0  4.082E-01 -4.082E-01 -8.166E-01  1.400E+01  1.000E+00  0.000E+00
+     48  3.536E+00 -3.536E+00  0.000E+00        5          0  7.069E-01 -7.069E-01 -2.626E-02  1.400E+01  1.000E+00  0.000E+00
+     49  0.000E+00  5.000E+00  0.000E+00        4          0 -6.085E-01  0.000E+00  7.936E-01  1.400E+01  1.000E+00  0.000E+00
+     50  5.000E+00  0.000E+00  0.000E+00        1          0  0.000E+00 -9.836E-01 -1.802E-01  1.400E+01  1.000E+00  0.000E+00
+1problem summary                                                                                                           
+
+      run terminated when    10000000  particle histories were done.
++                                                                                                    03/05/13 16:09:15 
+      title card goes here                                                                 probid =  03/05/13 16:08:27 
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source            10000000    1.0000E+00    1.4000E+01          escape            10000000    1.0000E+00    1.4000E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            0.                  downscattering           0    0.            0.        
+ photonuclear             0    0.            0.                  capture                  0    0.            0.        
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total         10000000    1.0000E+00    1.4000E+01              total         10000000    1.0000E+00    1.4000E+01
+
+   number of neutrons banked                       0        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0000E+00          escape            4.7959E-01          tco   1.0000E+33
+   neutron collisions per source particle 0.0000E+00          capture           0.0000E+00          eco   0.0000E+00
+   total neutron collisions                        0          capture or escape 4.7959E-01          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   4.7959E-01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.79 minutes            maximum number ever in bank         0
+ computer time in mcrun               0.79 minutes            bank overflows to backup file       0
+ source particles per minute            1.2639E+07
+ random numbers generated                 35461352            most random numbers used was          25 in history     7952230
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1     2002503      2002503            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        2        2     2000836      2000836            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        3        3     1997229      1997229            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        4        4     1998995      1998995            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        5        5     2000437      2000437            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        6        6       25445        25445            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+        7        7    10025445     10000000            0    0.0000E+00   1.4000E+01   1.4000E+01   1.0000E+00   0.0000E+00
+
+           total      20050890     20025445            0    0.0000E+00
+
+1tally        4        nps =    10000000
+           tally type 4    track length estimate of particle flux.      units   1/cm**2   
+           tally for  neutrons 
+
+           volumes 
+                   cell:       1            2            3            4            5            6                  
+                         3.35103E-02  3.35103E-02  3.35103E-02  3.35103E-02  3.35103E-02  3.35103E-02
+ 
+        cell
+        1        1.19516E+00 0.0006
+        2        1.19416E+00 0.0006
+        3        1.19201E+00 0.0006
+        4        1.19306E+00 0.0006
+        5        1.19392E+00 0.0006
+        6        2.38709E-02 0.0065
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.00      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 1.1944E+00 to 1.1959E+00; 1.1936E+00 to 1.1967E+00; 1.1929E+00 to 1.1974E+00
+ estimated  symmetric confidence interval(1,2,3 sigma): 1.1944E+00 to 1.1959E+00; 1.1936E+00 to 1.1967E+00; 1.1929E+00 to 1.1974E+00
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (1.264E+07)*( 5.004E-01)**2 = (1.264E+07)*(2.504E-01) = 3.165E+06
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+        4   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     6 tally bins all have relative errors less than 0.10 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+1tally fluctuation charts                              
+
+                            tally        4
+          nps      mean     error   vov  slope    fom
+       512000   1.1977E+00 0.0028 0.0000 10.0 3176387
+      1024000   1.1967E+00 0.0020 0.0000 10.0 3178238
+      1536000   1.1962E+00 0.0016 0.0000 10.0 3178277
+      2048000   1.1955E+00 0.0014 0.0000 10.0 3176959
+      2560000   1.1944E+00 0.0012 0.0000 10.0 3173652
+      3072000   1.1944E+00 0.0011 0.0000 10.0 3169677
+      3584000   1.1946E+00 0.0011 0.0000 10.0 3167563
+      4096000   1.1952E+00 0.0010 0.0000 10.0 3168766
+      4608000   1.1955E+00 0.0009 0.0000 10.0 3169019
+      5120000   1.1948E+00 0.0009 0.0000 10.0 3164649
+      5632000   1.1947E+00 0.0008 0.0000 10.0 3163946
+      6144000   1.1952E+00 0.0008 0.0000 10.0 3163789
+      6656000   1.1951E+00 0.0008 0.0000 10.0 3162968
+      7168000   1.1950E+00 0.0007 0.0000 10.0 3163117
+      7680000   1.1953E+00 0.0007 0.0000 10.0 3164661
+      8192000   1.1951E+00 0.0007 0.0000 10.0 3165166
+      8704000   1.1952E+00 0.0007 0.0000 10.0 3164806
+      9216000   1.1953E+00 0.0007 0.0000 10.0 3165116
+      9728000   1.1950E+00 0.0006 0.0000 10.0 3163852
+     10000000   1.1952E+00 0.0006 0.0000 10.0 3164771
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file runtpf     nps =    10000000     coll =              0     ctm =        0.79   nrn =         
+ 35461352
+
+         4 warning messages so far.
+
+
+ run terminated when    10000000  particle histories were done.
+
+ computer time =    0.79 minutes
+
+ mcnp     version 5     09282010                     03/05/13 16:09:16                     probid =  03/05/13 16:08:27 

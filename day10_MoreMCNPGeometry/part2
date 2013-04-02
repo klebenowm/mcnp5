@@ -1,0 +1,37 @@
+c -----------------------------------------------------------------------------
+c Cells
+c -----------------------------------------------------------------------------
+1 3 -3      -1 2 3 100 : -1 2 -100  $ Cell 1: Concrete Sphere
+2 1 -1.85   -2 3 10 : -2 -10        $ Cell 2: Be Sphere
+3 0         -1 -3 11 100            $ Cell 3: Void hole
+4 2 -0.01   -3 -11 10               $ Cell 4: Target Trit
+10 0        1                       $ Cell 10: Graveyard
+c blank line below
+
+c -----------------------------------------------------------------------------
+c Surfaces
+c -----------------------------------------------------------------------------
+c 1 SO 40 $ Surf 1: Outer Sphere
+1 RPP -40 40 -40 40 -40 40
+2 SO 25 $ Surf 2: Inner Sphere
+3 CZ 2  $ Surf 3: Cylinder Hole
+c Disc Planes (10 lower and 11 upper)
+10 PZ -0.25
+11 PZ  0.25
+100 PZ 0 $ X-Y Plane
+c blank line below
+
+c -----------------------------------------------------------------------------
+c General
+c -----------------------------------------------------------------------------
+c Material cards---------------------------------
+M1 4009 1    $ material 1: Be, density = 1.85 g/cc
+M2 1003 1    $ material 2: Tritium, density = 0.01 g/cc
+c  material 3: concrete, density = 3 g/cc
+M3 14028 -0.5 20040 -0.2  8016 -0.2 1001 -0.1 
+M4 1001 2 8016 1 $ material 4: water, density = 1 g/cc
+M5 5011 1    $ material 5: boron, density = 2.5 g/cc
+M6 92236 1   $ material 6: 235-U, density = 10 g/cc
+c -----------------------------------------------------------------------------
+c Source cards ---------------------------------
+sdef

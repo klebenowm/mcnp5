@@ -1,0 +1,162 @@
+          Thread Name & Version = MCNP5, 1.60
+                                  _                                      
+            ._ _    _  ._   ._   |_                                      
+            | | |  (_  | |  |_)   _)                                     
+                            |                                            
+  +---------------------------------------------------------------------+
+  | Copyright 2010. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Los Energy. The Government is granted for itself and  |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2010, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 5     ld=09282010                     02/19/13 15:47:09 
+ *************************************************************************                 probid =  02/19/13 15:47:09 
+ i=demo1.i n=demo1_                                                              
+
+         1-       Demo problem #1 for NEEP602 MC Course (Spring 2005)                             
+         2-       C Cell cards                                                                    
+         3-       C ell#  Mat#   Dens   Surface combinations                                      
+         4-       1       1       -1     -1                                                       
+         5-       2       2       -5     -2                                                       
+         6-       3       0               1  2 -3                                                 
+         7-       4       0               3                                                       
+         8-                                                                                       
+         9-       C Surface cards                                                                 
+        10-       1 sph   3 0 0 2                                                                 
+        11-       2 sph  -2 0 0 1                                                                 
+        12-       3 sph  0 0 0 15                                                                 
+        13-                                                                                       
+        14-       C Data cards                                                                    
+        15-       IMP:n 1 1 1 0                                                                   
+        16-       m1   1001 2.0 8016 1.0                                                          
+        17-       m2   3007 1.0                                                                   
+        18-       sdef                                                                            
+        19-       nps 10000                                                                       
+ 
+  warning.  there are no tallies in this problem.
+ 
+  warning.    1 materials had unnormalized fractions. print table 40.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
+
+        1        1        1  1.00309E-01 1.00000E+00 3.35103E+01 3.35103E+01           1  1.0000E+00                                   
+        2        2        2  4.29165E-01 5.00000E+00 4.18879E+00 2.09440E+01           1  1.0000E+00                                   
+        3        3        0  0.00000E+00 0.00000E+00 1.40995E+04 0.00000E+00           1  1.0000E+00                                   
+        4        4        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               1.41372E+04 5.44543E+01
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         2 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   3007.70c   16324   3-Li-  7 at 293.6K from endf/b-vii.0 njoy99.248                             mat 328      08/24/07
+   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+
+  total      190898
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file demo1_r     nps =           0     coll =              0     ctm =        0.00   nrn =            
+     0
+
+         2 warning messages so far.
+1problem summary                                                                                                           
+
+      run terminated when       10000  particle histories were done.
++                                                                                                    02/19/13 15:47:10 
+      Demo problem #1 for NEEP602 MC Course (Spring 2005)                                  probid =  02/19/13 15:47:09 
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source               10000    1.0000E+00    1.4000E+01          escape               10013    9.9895E-01    1.3646E+01
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            0.                  downscattering           0    0.            3.0793E-01
+ photonuclear             0    0.            0.                  capture                  0    2.3395E-03    3.2328E-02
+ (n,xn)                  26    2.5781E-03    4.5847E-03          loss to (n,xn)          13    1.2891E-03    1.7959E-02
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total            10026    1.0026E+00    1.4005E+01              total            10026    1.0026E+00    1.4005E+01
+
+   number of neutrons banked                      13        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0026E+00          escape            3.4671E-01          tco   1.0000E+33
+   neutron collisions per source particle 9.8700E-02          capture           5.2112E-02          eco   0.0000E+00
+   total neutron collisions                      987          capture or escape 3.4602E-01          wc1  -5.0000E-01
+   net multiplication              1.0013E+00 0.0004          any termination   3.4558E-01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.01 minutes            maximum number ever in bank         1
+ computer time in mcrun               0.00 minutes            bank overflows to backup file       0
+ source particles per minute            6.0000E+05
+ random numbers generated                    36250            most random numbers used was         180 in history        9510
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1        1263         1263          375    3.7045E-02   8.6105E+00   1.3145E+01   9.9007E-01   9.6748E+00
+        2        2         653          666          612    6.0981E-02   1.0066E+01   1.2228E+01   9.9666E-01   1.5629E+00
+        3        3       11929        10013            0    0.0000E+00   1.1797E+01   1.3694E+01   9.9801E-01   0.0000E+00
+
+           total         13845        11942          987    9.8026E-02
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file demo1_r     nps =       10000     coll =            987     ctm =        0.00   nrn =            
+ 36250
+
+         2 warning messages so far.
+
+
+ run terminated when       10000  particle histories were done.
+
+ computer time =    0.01 minutes
+
+ mcnp     version 5     09282010                     02/19/13 15:47:10                     probid =  02/19/13 15:47:09 
