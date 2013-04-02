@@ -41,7 +41,9 @@ F14:p 2     $ In box
 F102:p 2.5  $ Box top
 SD102 400
 c photon point
-F5:p 0 0 30 $ Point (0,0,30)
+F5:p 0 0 30 0.005 $ Point (0,0,30)
+c energy deposition
+F6:n,p 2 $ Box deposition
 C Data Cards end then recommended blank line
 
 Eveything after this point is ignored by MCNP
