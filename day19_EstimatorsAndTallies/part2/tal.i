@@ -31,13 +31,12 @@ totnu
 print 110 170
 nps 10000
 C Tally Cards
-F2:n 2.5 $ Neutrons crossing the box top
-SD2 400
-C $ Angular distribution in 10 cosine bins
+F2:n 2.5    $ Neutrons crossing the box top
+SD2 400     $ Area of box top
+C Energy spectrum in 5 logarithmic groups
+E2 1. 10. 100. 1000. 10000.
+C Angular distribution in 10 cosine bins
+C2 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1
 C Data Cards end then recommended blank line
 
 Eveything after this point is ignored by MCNP
-
-
-
-
