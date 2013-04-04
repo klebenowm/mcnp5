@@ -1,4 +1,5 @@
 Day 19: Part 2
+C =====================================================================
 C Cell Cards begin
 1 1 -10     -1
 2 2 -1       1 -2
@@ -29,6 +30,10 @@ C include delayed neutrons
 totnu
 print 110 170
 nps 10000
+C Tally Cards
+F2:n 2.5 $ Neutrons crossing the box top
+SD2 400
+C $ Angular distribution in 10 cosine bins
 C Data Cards end then recommended blank line
 
 Eveything after this point is ignored by MCNP
