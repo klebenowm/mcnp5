@@ -13,7 +13,7 @@ C Surface Cards begin
 C Surface Cards end then blank line
 
 C Data Cards begin
-C need to define cell volumes because MCNP can't
+C need to define cell volumes because MCNP can''t
 vol 3141.59  28858.41 2J
 IMP:n 1 1 1 0
 C both a neutron and photon problem
