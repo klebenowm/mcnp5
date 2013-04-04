@@ -11,6 +11,7 @@ C Surface Cards begin
 1 rcc    0 0 0   0 0 10   10
 2 rpp    -20  20    -20 20    0 20
 3 sph   0 0 0  40
+4 CZ    10
 C Surface Cards end then blank line
 
 C Data Cards begin
@@ -31,12 +32,14 @@ totnu
 print 110 170
 nps 10000
 C Tally Cards
-F2:n 2.5    $ Neutrons crossing the box top
-SD2 400     $ Area of box top
+F2:n 2.5 $ Neutrons tally crossing the box top
+SD2 (31.459 368.541 400) $ Area definitions
 C Energy spectrum in 5 logarithmic groups
 E2 1. 10. 100. 1000. 10000.
 C Angular distribution in 10 cosine bins
-C2 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1
+C2 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1 T
+C Segment within projection of cylinder (Surf 1.1)
+FS2 4 T
 C Data Cards end then recommended blank line
 
 Eveything after this point is ignored by MCNP
