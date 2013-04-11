@@ -1,12 +1,15 @@
 Day 22 - Part A
 c Cell Cards
-1 1 -19 -1 imp:n=1
-2 0 1 -2 imp:n=0
+1 1 -19 -10 imp:n=1
+2 0 10 -2 imp:n=0
 3 0 2 imp:n=0
 c blank line
 
 c Surface Cards
 1 sph 0 0 0 8.7 $ Sphere
+10 rpp -3.506082500 3.506082500
+     -3.506082500 3.506082500
+     -3.506082500 3.506082500
 2 rpp -100 100 -100 100 -100 100
 c blank line
 
