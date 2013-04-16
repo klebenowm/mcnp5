@@ -49,7 +49,7 @@ FM16 1.6021777e-4   $ Scale to Watts
 F26:p 7             $ Tally photons
 SD26 1              $ Specify unit mass
 FM26 1.6021777e-4   $ Scale to Watts
-C Assume a physical source strength of 1e12 n/s
+C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
 1. Establish an energy grid for all tallies with 44 bins spaced
