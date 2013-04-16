@@ -36,8 +36,10 @@ c Be sphere current
 F1:n 1 $ Surface current
 C1 0 1 $ Cosine bins (entering if <0, exiting if >0)
 c flux at detector
-F4:n 7 $ Cell flux at detector
-CF4 1 5 $ Flag Be sphere and water jacket
+F4:n 7  $ Cell flux at detector
+CF4 1   $ Flag Be sphere
+F14:n 7 $ Cell flux at detector
+CF14 5  $ Flag water jacket
 C Assume a physical source strength of 1e12 n/s
 
 C Blank line above makes these comments
