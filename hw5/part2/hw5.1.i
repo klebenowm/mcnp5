@@ -54,4 +54,4 @@ C Blank line above makes these comments
    Tally both the photon and neutron fluxes.
    Produce a plot of these mesh tallies in the Y-Z plane
 7. Using the ICRP 21 flux-to-dose conversion factors in Appendix H, 
-   calculate the neutron and photon doses at the point (0,100,100)
+   calculate the neutron and photon doses at the point (0,50,50)
