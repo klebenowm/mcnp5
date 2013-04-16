@@ -29,6 +29,12 @@ C Source
 C this problem assumes an isotropic 14 MeV neutron source 
 C at the origin
 sdef
+C Tally cards
+c Energy grid for all tallies (1)
+E0 1e-10 44ILOG 10 4I 20
+c Be sphere current
+F1:n 1 $ Surface current
+C1 0 1 $ Cosine bins (entering if <0, exiting if >0)
 C Assume a physical source strength of 1e12 n/s
 
 C Blank line above makes these comments
