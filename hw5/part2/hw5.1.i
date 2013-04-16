@@ -1,4 +1,4 @@
-Input file for HW #5
+Input file for HW #5 Part II
 C Cell cards
 1 1 -1.85    -1  3         imp:n=1  $ Be Sphere
 4 3 -4.5        -3  4      imp:n=1  $ tritiated target

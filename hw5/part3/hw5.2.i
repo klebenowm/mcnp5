@@ -1,4 +1,4 @@
-Simple aqueous reactor model
+Simple aqueous reactor model (HW5: Part IIIB)
 C Cell cards
 1  1 -1   -1 2 3 4 5 6
 2  2 -1   -2 -102
