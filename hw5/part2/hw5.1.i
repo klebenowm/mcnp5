@@ -19,7 +19,7 @@ C Surface cards
 
 C Data cards
 mode n p
-nps 1e6
+nps 1e7
 C Materials
 m1 4009 1   $ simple Be description
 m2 1001 2 8016 1 5010 0.05 $ borated water
@@ -43,12 +43,12 @@ F14:n 7  $ Cell flux at detector
 CF14 5   $ Flag water jacket
 FQ14 E D $ Order
 c heating in detector
-F6:n 7              $ Tally neutrons
-SD6 1               $ Specify unit mass
-FM6 1.6021777e-4    $ Scale to Watts
-F16:p 7             $ Tally photons
+F16:n 7             $ Tally neutrons
 SD16 1              $ Specify unit mass
 FM16 1.6021777e-4   $ Scale to Watts
+F26:p 7             $ Tally photons
+SD26 1              $ Specify unit mass
+FM26 1.6021777e-4   $ Scale to Watts
 C Assume a physical source strength of 1e12 n/s
 
 C Blank line above makes these comments
