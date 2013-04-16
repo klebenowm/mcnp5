@@ -1,4 +1,4 @@
-Simple aqueous reactor model (HW5: Part IIIB)
+Simple aqueous reactor model
 C Cell cards
 1  1 -1   -1 2 3 4 5 6
 2  2 -1   -2 -102
@@ -24,7 +24,7 @@ C Surf cards
 103 pz 40
 104 pz 60
 105 pz 80
-106 pz 1
+106 pz 51
 
 C Data cards
 kcode 10000 0.945 25 75
