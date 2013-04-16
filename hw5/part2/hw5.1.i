@@ -35,6 +35,9 @@ E0 1e-10 44ILOG 10 4I 20
 c Be sphere current
 F1:n 1 $ Surface current
 C1 0 1 $ Cosine bins (entering if <0, exiting if >0)
+c flux at detector
+F4:n 7 $ Cell flux at detector
+CF4 1  $ Flag Be sphere
 C Assume a physical source strength of 1e12 n/s
 
 C Blank line above makes these comments
