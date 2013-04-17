@@ -61,6 +61,20 @@ FMESH54:p GEOM=xyz ORIGIN=-50 -50 -50
      IMESH=-40 -25 25 40 50 IINTS=2 5 50 5 2
      JMESH=-40 -25 25 40 50 JINTS=2 5 50 5 2
      KMESH=-40 -25 25 40 50 KINTS=2 5 50 5 2
+c neutron and photon doses at (0,49,49)
+F45:n 0 49 49 0.1
+DE45 2.5e-8 1e-7 5ILOG 1e-1 5e-1 1 2 5 10 20
+DF45 3.85e-6 4.17e-6 4.55e-6 4.35e-6 4.17e-6 3.7e-6 3.57e-6
+     2.08e-5 7.14e-5 1.18e-4 1.43e-4 1.47e-4 1.47e-4 1.54e-4
+FM45 1e9 $ Scale by source strength
+F55:p 0 49 49 0.1
+DE55 0.01 0.015 0.02 3I 0.06 0.08 0.1 0.15 0.2 3I 0.6 0.8 1. 1.5
+      2 3I 6 8 10
+DF55 2.78e-6 1.11e-6 5.88e-7 2.56e-7 1.56e-7 1.2e-7 1.11e-7 1.2e-7
+     1.47e-7 2.38e-7 3.45e-7 5.56e-7 7.69e-7 9.09e7 1.14e-6 1.47e-6
+     1.79e-6 2.44e-6 3.03e-6 4e-6 4.76e-6 5.56e-6 6.25e-6 7.69e-6
+     9.09e-6
+FM55 1e9
 C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
