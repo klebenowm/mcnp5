@@ -19,7 +19,7 @@ C Surface cards
 
 C Data cards
 mode n p
-nps 1e7
+nps 1e5
 C Materials
 m1 4009 1   $ simple Be description
 m2 1001 2 8016 1 5010 0.05 $ borated water
@@ -52,6 +52,15 @@ FM26 1.6021777e-4   $ Scale to Watts
 c rate of (n,2n) reactions in Be sphere
 F34:n 1         $ Tally neutrons in Be sphere
 FM34 1e9 1 16     $ Tally multiplier for (n,2n)
+c Mesh tally entire water block
+FMESH44:n GEOM=xyz ORIGIN=-50 -50 -50
+     IMESH=-40 -25 25 40 50 IINTS=2 5 50 5 2
+     JMESH=-40 -25 25 40 50 JINTS=2 5 50 5 2
+     KMESH=-40 -25 25 40 50 KINTS=2 5 50 5 2
+FMESH54:p GEOM=xyz ORIGIN=-50 -50 -50
+     IMESH=-40 -25 25 40 50 IINTS=2 5 50 5 2
+     JMESH=-40 -25 25 40 50 JINTS=2 5 50 5 2
+     KMESH=-40 -25 25 40 50 KINTS=2 5 50 5 2
 C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
