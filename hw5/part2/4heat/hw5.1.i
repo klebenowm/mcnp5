@@ -32,16 +32,6 @@ sdef
 C Tally cards
 c Energy grid for all tallies (1)
 E0 1e-10 44ILOG 10 4I 20
-c Be sphere current
-C F1:n 1 $ Surface current
-C C1 0 1 $ Cosine bins (entering if <0, exiting if >0)
-c flux at detector
-C F4:n 7   $ Cell flux at detector
-C CF4 1    $ Flag Be sphere
-C FQ4 E D  $ Order
-C F14:n 7  $ Cell flux at detector
-C CF14 5   $ Flag water jacket
-C FQ14 E D $ Order
 c heating in detector
 F16:n 7             $ Tally neutrons
 SD16 1              $ Specify unit mass

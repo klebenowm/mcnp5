@@ -35,20 +35,6 @@ E0 1e-10 44ILOG 10 4I 20
 c Be sphere current
 F1:n 1 $ Surface current
 C1 0 1 $ Cosine bins (entering if <0, exiting if >0)
-c flux at detector
-C F4:n 7   $ Cell flux at detector
-C CF4 1    $ Flag Be sphere
-C FQ4 E D  $ Order
-C F14:n 7  $ Cell flux at detector
-C CF14 5   $ Flag water jacket
-C FQ14 E D $ Order
-c heating in detector
-C F16:n 7             $ Tally neutrons
-C SD16 1              $ Specify unit mass
-C FM16 1.6021777e-4   $ Scale to Watts
-C F26:p 7             $ Tally photons
-C SD26 1              $ Specify unit mass
-C FM26 1.6021777e-4   $ Scale to Watts
 C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
