@@ -19,7 +19,7 @@ C Surface cards
 
 C Data cards
 mode n p
-nps 1e6
+nps 1e5
 C Materials
 m1 4009 1   $ simple Be description
 m2 1001 2 8016 1 5010 0.05 $ borated water
@@ -51,7 +51,7 @@ c SD26 1              $ Specify unit mass
 c FM26 1.6021777e-4   $ Scale to Watts
 c rate of (n,2n) reactions in Be sphere
 F34:n 1         $ Tally neutrons in Be sphere
-FM34 1 1 16     $ Tally multiplier for (n,2n)
+FM34 1e9 1 16     $ Tally multiplier for (n,2n)
 C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
