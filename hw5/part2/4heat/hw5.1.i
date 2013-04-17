@@ -19,7 +19,7 @@ C Surface cards
 
 C Data cards
 mode n p
-nps 1e7
+nps 5e7
 C Materials
 m1 4009 1   $ simple Be description
 m2 1001 2 8016 1 5010 0.05 $ borated water
