@@ -49,6 +49,9 @@ FM16 1.6021777e-4   $ Scale to Watts
 F26:p 7             $ Tally photons
 SD26 1              $ Specify unit mass
 FM26 1.6021777e-4   $ Scale to Watts
+c rate of (n,2n) reactions in Be sphere
+F34:n 1         $ Tally neutrons in Be sphere
+FM34 1e9 1 16     $ Tally multiplier for (n,2n)
 C Assume a physical source strength of 1e9 n/s
 
 C Blank line above makes these comments
