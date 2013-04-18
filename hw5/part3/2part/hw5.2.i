@@ -28,7 +28,7 @@ C Surf cards
 C Data cards
 kcode 10000 0.945 25 75
 ksrc  5 5 50
-imp:n 1 10r 0
+imp:n 1 9r 0
 C Materials
 M1 1001 2 8016 1 92235 0.00649 92238 0.09351
 M2 1001 2 8016 1 5010 0.005
