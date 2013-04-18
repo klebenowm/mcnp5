@@ -34,6 +34,12 @@ C Materials
 M1 1001 2 8016 1 92235 0.00649 92238 0.09351
 M2 1001 2 8016 1 5010 0.005
 M3 5010 1
+C Tallies
+c 3 cm mesh
+FMESH4:n GEOM=xyz ORIGIN=-51 -51 -1
+     IMESH=51  IINTS=34
+     JMESH=51  JINTS=34
+     KMESH=101 KINTS=34
 
 C The above blank line ensures that the following will be treated as comments
 1. Determine the U-235 enrichment that will make this system critical.
