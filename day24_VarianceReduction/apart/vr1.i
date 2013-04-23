@@ -22,5 +22,6 @@ c        the following is  pseudo-concrete
 m1 1001 -.02 8016 -.60 14000 -.38
 sdef   pos= 0. 1.e-6 0. erg=2
 f1:n  9
-nps   10000
-imp:n  1 6r 0
+nps   640e3
+ctme 1
+imp:n  1 4.8m 1.75m 2.08m 2.5m 2.85m 3.16m 0

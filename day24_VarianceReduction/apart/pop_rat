@@ -1,0 +1,274 @@
+          Thread Name & Version = MCNP5, 1.60
+                                  _                                      
+            ._ _    _  ._   ._   |_                                      
+            | | |  (_  | |  |_)   _)                                     
+                            |                                            
+  +---------------------------------------------------------------------+
+  | Copyright 2010. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Los Energy. The Government is granted for itself and  |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2010, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 5     ld=09282010                     04/23/13 15:37:59 
+ *************************************************************************                 probid =  04/23/13 15:37:59 
+ i=vr1.i tasks 2                                                                 
+
+         1-       variance reduction problem 1                                                    
+         2-        1     1 -2.03  -1  -3   2                                                      
+         3-        2     1 -2.03  -1  -4   3                                                      
+         4-        3     1 -2.03  -1  -5   4                                                      
+         5-        4     1 -2.03  -1  -6   5                                                      
+         6-        5     1 -2.03  -1  -7   6                                                      
+         7-        6     1 -2.03  -1  -8   7                                                      
+         8-        7     1 -2.03  -1  -9   8                                                      
+         9-        8     0         1:-2:9                                                         
+        10-                                                                                       
+        11-        1     cy  100                                                                  
+        12-        2     py  0                                                                    
+        13-        3     py  10                                                                   
+        14-        4     py  20                                                                   
+        15-        5     py  30                                                                   
+        16-        6     py  40                                                                   
+        17-        7     py  50                                                                   
+        18-        8     py  60                                                                   
+        19-        9     py  70                                                                   
+        20-                                                                                       
+        21-       c        the following is  pseudo-concrete                                      
+        22-       m1 1001 -.02 8016 -.60 14000 -.38                                               
+        23-       sdef   pos= 0. 1.e-6 0. erg=2                                                   
+        24-       f1:n  9                                                                         
+        25-       nps   640e3                                                                     
+        26-       imp:n  1 4.8m 1.75m 2.08m 2.5m 2.85m 3.16m 0                                    
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
+
+        1        1        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  1.0000E+00                                   
+        2        2        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  4.8000E+00                                   
+        3        3        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  8.4000E+00                                   
+        4        4        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  1.7472E+01                                   
+        5        5        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  4.3680E+01                                   
+        6        6        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  1.2449E+02                                   
+        7        7        1  8.66573E-02 2.03000E+00 3.14159E+05 6.37743E+05           1  3.9338E+02                                   
+        8        8        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               2.19911E+06 4.46420E+06
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+
+                        tables from file c00740/endf60                                                   
+
+  14000.60c   51392  14-si-nat from endf/b-vi                                                     mat1400      11/25/93
+
+  total      225966
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file runtpe     nps =           0     coll =              0     ctm =        0.00   nrn =             
+    0
+1problem summary                                                                                                           
+
+      run terminated when      640000  particle histories were done.
++                                                                                                    04/23/13 15:41:04 
+      variance reduction problem 1                                                         probid =  04/23/13 15:37:59 
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              640000    1.0000E+00    2.0000E+00          escape              751740    8.3665E-01    1.2401E+00
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance    6014878    3.8750E-01    4.1141E-02          cell importance    4696959    3.8701E-01    4.0931E-02
+ weight cutoff            0    3.1375E-02    1.1890E-09          weight cutoff      1206179    3.1358E-02    1.1880E-09
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            1.7159E-07          downscattering           0    0.            7.5992E-01
+ photonuclear             0    0.            0.                  capture                  0    1.6386E-01    1.9865E-04
+ (n,xn)                   0    0.            0.                  loss to (n,xn)           0    0.            0.        
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total          6654878    1.4189E+00    2.0411E+00              total          6654878    1.4189E+00    2.0411E+00
+
+   number of neutrons banked                 3636357        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0398E+01          escape            1.5302E+03          tco   1.0000E+33
+   neutron collisions per source particle 3.2824E+02          capture           3.4479E+04          eco   0.0000E+00
+   total neutron collisions                210070577          capture or escape 6.9263E+03          wc1  -5.0000E-01
+   net multiplication              1.0000E+00 0.0000          any termination   1.2481E+04          wc2  -2.5000E-01
+
+ computer time so far in this run     6.12 minutes            maximum number ever in bank        30
+ computer time in mcrun               6.11 minutes            bank overflows to backup file       0
+ source particles per minute            1.0471E+05
+ random numbers generated               3590181168            most random numbers used was      335376 in history      192560
+ 
+  warning.   random number stride   152917 exceeded      639 times.
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+
+ number of histories processed by each thread
+      326597      313403
+ 
+  warning.  importance function may be poor.  see print table 120.
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1      919545       864947      7957833    9.1437E+00   3.3470E-04   6.8833E-01   8.2250E-01   2.6592E+00
+        2        2     2500807      1832766     40526838    8.0093E+00   4.9547E-05   1.7435E-01   6.4960E-01   1.5805E+00
+        3        3     2476809      1528329     40551580    3.9180E+00   1.8213E-05   7.5088E-02   5.4266E-01   1.3382E+00
+        4        4     2245587      1538521     36129271    1.4809E+00   8.7144E-06   3.8435E-02   4.7148E-01   1.2377E+00
+        5        5     2070842      1535792     32576133    4.8755E-01   4.7964E-06   2.1768E-02   4.2610E-01   1.1882E+00
+        6        6     1917986      1490603     29656448    1.4639E-01   2.8716E-06   1.3184E-02   3.9803E-01   1.1614E+00
+        7        7     1473314      1218227     22672474    3.4281E-02   2.0789E-06   9.5764E-03   3.8412E-01   1.1498E+00
+
+           total      13604890     10009185    210070577    2.3220E+01
+
+1tally        1        nps =      640000
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  9                                                                                                                            
+                 2.96164E-04 0.0070
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        1
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.01      yes          yes            0.00      yes         yes            constant    random      10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ this tally meets the statistical criteria used to form confidence intervals: check the tally fluctuation chart to verify.
+ the results in other bins associated with this tally may not meet these statistical criteria.
+
+ ----- estimated confidence intervals:  -----
+
+ estimated asymmetric confidence interval(1,2,3 sigma): 2.9411E-04 to 2.9824E-04; 2.9204E-04 to 3.0031E-04; 2.8998E-04 to 3.0238E-04
+ estimated  symmetric confidence interval(1,2,3 sigma): 2.9410E-04 to 2.9823E-04; 2.9203E-04 to 3.0030E-04; 2.8996E-04 to 3.0236E-04
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        1 with nps=      640000 print table 160
+
+
+ normed average tally per history  = 2.96164E-04          unnormed average tally per history  = 2.96164E-04
+ estimated tally relative error    = 0.0070               estimated variance of the variance  = 0.0002
+ relative error from zero tallies  = 0.0047               relative error from nonzero scores  = 0.0052
+
+ number of nonzero history tallies =       42775          efficiency for the nonzero tallies  = 0.0668
+ history number of largest  tally  =      492734          largest  unnormalized history tally = 6.57298E-02
+ (largest  tally)/(average tally)  = 2.21937E+02          (largest  tally)/(avg nonzero tally)= 1.48334E+01
+
+ (confidence interval shift)/mean  = 0.0000               shifted confidence interval center  = 2.96177E-04
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.96164E-04             2.96267E-04                     0.000345
+      relative error                  6.97872E-03             6.98484E-03                     0.000876
+      variance of the variance        2.12341E-04             2.17253E-04                     0.023131
+      shifted center                  2.96177E-04             2.96177E-04                     0.000000
+      figure of merit                 3.35921E+03             3.35334E+03                    -0.001749
+
+ the estimated slope of the 198 largest  tallies starting at  2.86913E-02 appears to be decreasing at least exponentially.
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (1.047E+05)*( 1.791E-01)**2 = (1.047E+05)*(3.208E-02) = 3.359E+03
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+        1   passed the 10 statistical checks for the tally fluctuation chart bin result               
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+1tally fluctuation charts                              
+
+                            tally        1
+          nps      mean     error   vov  slope    fom
+        32000   2.9340E-04 0.0312 0.0046  5.5    3337
+        64000   2.9173E-04 0.0220 0.0021 10.0    3399
+        96000   2.9180E-04 0.0180 0.0014 10.0    3360
+       128000   2.9136E-04 0.0156 0.0010 10.0    3400
+       160000   2.9370E-04 0.0139 0.0008 10.0    3391
+       192000   2.9414E-04 0.0127 0.0007 10.0    3400
+       224000   2.9643E-04 0.0117 0.0006 10.0    3401
+       256000   2.9696E-04 0.0110 0.0005 10.0    3392
+       288000   2.9712E-04 0.0104 0.0005 10.0    3382
+       320000   2.9656E-04 0.0098 0.0004 10.0    3374
+       352000   2.9791E-04 0.0094 0.0004 10.0    3357
+       384000   2.9588E-04 0.0090 0.0003 10.0    3369
+       416000   2.9461E-04 0.0087 0.0003 10.0    3370
+       448000   2.9573E-04 0.0083 0.0003 10.0    3367
+       480000   2.9570E-04 0.0081 0.0003 10.0    3363
+       512000   2.9594E-04 0.0078 0.0003 10.0    3357
+       544000   2.9572E-04 0.0076 0.0003 10.0    3346
+       576000   2.9575E-04 0.0074 0.0002 10.0    3351
+       608000   2.9638E-04 0.0072 0.0002 10.0    3356
+       640000   2.9616E-04 0.0070 0.0002 10.0    3359
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file runtpe     nps =      640000     coll =      210070577     ctm =        6.11   nrn =       
+ 3590181168
+
+         2 warning messages so far.
+
+
+ run terminated when      640000  particle histories were done.
+
+ computer time =    6.12 minutes
+
+ mcnp     version 5     09282010                     04/23/13 15:41:04                     probid =  04/23/13 15:37:59 
