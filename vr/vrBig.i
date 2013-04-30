@@ -19,5 +19,14 @@ sp1   0 .5 .5 1
 f1:n  1.2
 f4:n  3
 f5:n  200 2005 0 0
-nps   10000
-imp:n 1 1 1 1 0
+c nps   10000 $ From original file
+ctme 1 $ Run one minute computer time
+imp:n 1 3m 3m 3m 0
+ext:n 0.6Y 0 0.6X 0 0
+c wwp:n 4j 0.25
+c wwg 1 0
+c MESH geom=cyl ref=0 0.001 0 origin=0 -1 0
+c      axs=0 1 0 vec=1 0 0
+c      IMESH=50 100 201 IINTS=2 2 1
+c      JMESH=181 1990 2001 JINTS=4 4 4
+c      KMESH=0.5 1 KINTS=2 2
