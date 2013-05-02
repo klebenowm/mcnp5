@@ -1,0 +1,730 @@
+          Thread Name & Version = MCNP5, 1.60
+                                  _                                      
+            ._ _    _  ._   ._   |_                                      
+            | | |  (_  | |  |_)   _)                                     
+                            |                                            
+  +---------------------------------------------------------------------+
+  | Copyright 2010. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Los Energy. The Government is granted for itself and  |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2010, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 5     ld=09282010                     05/02/13 17:12:56 
+ *************************************************************************                 probid =  05/02/13 17:12:56 
+ i=vrBig.i wwinp=ww3_e n=ww4_ tasks 2                                            
+
+         1-       variance reduction problem - Matthew Klebenow NE506                             
+         2-       1 1 -2.03  -1                                                                   
+         3-       2 0        -2                                                                   
+         4-       3 1 -.0203 -3                                                                   
+         5-       4 0        -4 3                                                                 
+         6-       5 0         1 2 4                                                               
+         7-                                                                                       
+         8-       1 rcc 0 0 0       0 180 0    100                                                
+         9-       2 rcc 0 180 0     0 1820 0   100                                                
+        10-       3 rcc 0 2000 0    0 10 0     100                                                
+        11-       4 rcc 0 2000 0    0 10 0     201                                                
+        12-                                                                                       
+        13-       c        the following is  pseudo-concrete                                      
+        14-       m1    1001 -.010      6012 -.001      8016 -.529                                
+        15-            13027 -.034     14000 -.337     26000 -.014                                
+        16-       sdef   pos=0 1.e-6 0 cel=1 wgt=1  erg=d1                                        
+        17-       si1    2 2.00000001 14 14.00000001                                              
+        18-       sp1   0 .5 .5 1                                                                 
+        19-       f1:n  1.2                                                                       
+        20-       f4:n  3                                                                         
+        21-       f5:n  200 2005 0 0                                                              
+        22-       c nps   10000 $ From original file                                              
+        23-       ctme 2                                                                          
+        24-       imp:n 1 1 1 1 0                                                                 
+        25-       ext:n 0.9Y 0 0 0 0 $ Exponential transform upward                               
+        26-       fcl:n 0 0 1 0 0 $ Force collision in cell 3                                     
+        27-       dxt:n 0 2005 0 101 102 $ DXTRAN sphere around tally 4                           
+        28-       PD5 0 0 1 0 0 $ Only accept detector tallies from cell 3                        
+        29-       wwp:n 4j -1                                                                     
+        30-       wwg 1 0                                                                         
+        31-       MESH geom=cyl ref=0 0.001 0 origin=0 -1 0                                       
+        32-            axs=0 1 0 vec=1 0 0                                                        
+        33-            IMESH=100 200                                                              
+        34-            IINTS=4 2                                                                  
+        35-            JMESH=180 1999 2011                                                        
+        36-            JINTS=4 2 4                                                                
+        37-            KMESH=0.5 1                                                                
+        38-            KINTS=2 2                                                                  
+
+ surface        1.1 and surface        2.1 are the same.        2.1 will be deleted.
+
+ surface        1.1 and surface        3.1 are the same.        3.1 will be deleted.
+
+ surface        1.2 and surface        2.3 are the same.        2.3 will be deleted.
+
+ surface        2.2 and surface        3.3 are the same.        3.3 will be deleted.
+
+ surface        2.2 and surface        4.3 are the same.        4.3 will be deleted.
+
+ surface        3.2 and surface        4.2 are the same.        4.2 will be deleted.
+ 
+  comment.           6 surfaces were deleted for being the same as others.
+
+ reading mesh-based weight windows from file ww3_e with probid =  05/02/13 17:11:18
+
+
+ 
+  warning.  energy of top neutron weight-window bin set to emax.
+ 
+  warning.  nonzero neutron  weight cutoff with zero windows.
+ 
+  warning.    1 materials had unnormalized fractions. print table 40.
+ 
+  warning.    1 of the materials appear at more than one density.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron                                     
+              cell     mat    density     density     volume       mass            pieces importance                                   
+
+        1        1        1  7.47871E-02 2.03000E+00 5.65487E+06 1.14794E+07           1  1.0000E+00                                   
+        2        2        0  0.00000E+00 0.00000E+00 5.71770E+07 0.00000E+00           1  1.0000E+00                                   
+        3        3        1  7.47871E-04 2.03000E-02 3.14159E+05 6.37743E+03           1  1.0000E+00                                   
+        4        4        0  0.00000E+00 0.00000E+00 9.55076E+05 0.00000E+00           1  1.0000E+00                                   
+        5        5        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               6.41011E+07 1.14858E+07
+1     exponential transform and forced collision parameters                                             print table 62
+
+                              neutron exp.           photon exp.       forced collisions
+              cell      dir    transform      dir    transform       neutron        photon
+
+        1        1       y      0.90000                                                    
+        3        3                                                   1.00000               
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+
+ mesh-based weight window generator reference mesh index:        1
+     fine mesh indices,  i,j,k:    1    1    1
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         4 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/endf70a                                                  
+
+   1001.70c    3652   1-H -  1 at 293.6K from endf/b-vii.0 njoy99.248                             mat 125      03/27/08
+   8016.70c  170922   8-O - 16 at 293.6K from endf/b-vii.0 njoy99.248                             mat 825      08/25/07
+  13027.70c   85936  13-Al- 27 at 293.6K from endf/b-vii.0 njoy99.248                             mat1325      08/25/07
+
+                        tables from file c00740/rmccs                                                    
+
+   6012.50c   16126  njoy                                                                       (  1306)      79/07/31.
+  26000.55c   84136  njoy                                                                       ( 260)       10/21/82  
+
+                        tables from file c00740/endf60                                                   
+
+  14000.60c   51392  14-si-nat from endf/b-vi                                                     mat1400      11/25/93
+
+  total      412164
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file ww4_r     nps =           0     coll =              0     ctm =        0.00   nrn =              
+   0
+
+         4 warning messages so far.
+ warning.  particle escaped wwg mesh in r direction.                   
+ nps =           6     nrn =                 122 msh =    7     cel =    4            
+ x,y,z =    -1.1453E+01     2.0061E+03     9.9342E+01
+ warning.  contribution to dxtran sphere prevented by zero importance. 
+ nps =          56     nrn =                 113 dxt =    1     cel =    5            
+ warning.  contribution to dxtran sphere prevented by zero importance. 
+ nps =         146     nrn =                   8 dxt =    1     cel =    5            
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 1.0014E-14 2.3901E-09 4.8933E-01 1.6405E-01 1.2560E+02 0.0000E+00 1.8197E-08     3        24418794              448552
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 3.8398E-14 3.4246E-09 2.3073E+00 3.1566E-01 1.5455E+02 0.0000E+00 2.8884E-08     3        24421197              506967
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 1.5024E-14 1.9684E-08 5.5447E-01 8.6204E-01 2.2096E+02 0.0000E+00 1.3506E-08     3        49412127              290028
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 5.7846E-15 8.0340E-10 8.7220E-01 1.5033E-01 1.2880E+02 0.0000E+00 8.0011E-08     3        24421203              507082
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 3.6280E-14 8.2391E-09 4.5368E-01 1.1787E-01 1.2073E+02 0.0000E+00 3.3137E-08     3        49416221              388635
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 5.9360E-15 1.0191E-09 6.0431E-01 1.1399E-01 1.2138E+02 0.0000E+00 5.6801E-08     3        49416222              388657
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 6.3606E-15 1.3562E-09 6.1990E-01 2.3445E-01 1.2900E+02 0.0000E+00 6.5313E-09     3        49450778             1222282
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 1.2441E-14 2.2582E-09 7.3773E-01 1.8703E-01 1.3295E+02 0.0000E+00 3.8250E-08     3        49454583             1311969
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 1.1138E-14 2.2465E-08 4.0243E-01 7.3838E-01 2.4847E+02 0.0000E+00 3.9159E-08     3        49454587             1312032
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 9.8840E-15 5.9374E-10 1.3721E+01 8.1314E-01 2.4119E+02 0.0000E+00 1.5678E-08     3        49454757             1315480
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 1.6682E-14 2.2349E-09 6.2345E-01 5.5829E-02 1.1212E+02 0.0000E+00 5.5017E-08     3        49460541             1454356
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 9.9441E-15 8.2831E-10 3.3907E+00 2.9447E-01 1.8299E+02 0.0000E+00 8.4955E-08     3        49465728             1577635
+
+ det     t         wgt        psc       amfp       ddetx     radius       erg     cell        nps  nch     n       nrn
+  1 4.0422E-13 4.8966E-09 1.7483E+01 2.1559E-01 1.6483E+02 0.0000E+00 2.5739E-08     3      5904170880             1678353
+1problem summary                                                                                                           
+
+      run terminated when it had used  2.0  minutes of computer time.
++                                                                                                    05/02/13 17:14:03 
+      variance reduction problem - Matthew Klebenow NE506                                  probid =  05/02/13 17:12:56 
+0
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              101878    1.0000E+00    9.4985E+00          escape              300168    7.7755E-01    5.5336E+00
+                                                                 energy cutoff            0    0.            0.        
+                                                                 time cutoff              0    0.            0.        
+ weight window      2602388    4.8681E-01    3.1670E-01          weight window      2632951    4.8729E-01    3.1807E-01
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    1.2661E-03    5.0959E-04          weight cutoff        93602    1.2038E-03    4.4885E-04
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran              130680    6.5336E-09    8.0972E-09          dxtran                 293    1.0367E-08    2.5223E-08
+ forced collisions   191603    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    4.4444E+00    3.3282E+00          exp. transform           0    4.4583E+00    3.3266E+00
+ upscattering             0    0.            9.2480E-08          downscattering           0    0.            2.7276E+00
+ photonuclear             0    0.            0.                  capture                  0    2.1179E-01    1.2046E+00
+ (n,xn)                 930    7.2986E-03    1.7038E-02          loss to (n,xn)         465    3.6493E-03    4.9923E-02
+ prompt fission           0    0.            0.                  loss to fission          0    0.            0.        
+ delayed fission          0    0.            0.                                                                        
+     total          3027479    5.9398E+00    1.3161E+01              total          3027479    5.9398E+00    1.3161E+01
+
+   number of neutrons banked                 2508244        average time of (shakes)              cutoffs
+   neutron tracks per source particle     2.9717E+01          escape            1.2675E+03          tco   1.0000E+33
+   neutron collisions per source particle 1.7323E+02          capture           2.3326E+04          eco   0.0000E+00
+   total neutron collisions                 17648155          capture or escape 5.9897E+03          wc1  -5.0000E-01
+   net multiplication              1.0036E+00 0.0002          any termination   3.2678E+03          wc2  -2.5000E-01
+
+ computer time so far in this run     2.07 minutes            maximum number ever in bank       341
+ computer time in mcrun               2.04 minutes            bank overflows to backup file       0
+ source particles per minute            4.9980E+04
+ random numbers generated                410658542            most random numbers used was     6754115 in history       55995
+ 
+  warning.   random number stride   152917 exceeded      525 times.
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+
+ number of histories processed by each thread
+       49875       52003
+ 
+  warning.  some of the geometry is covered by a weight window mesh.
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1      101886      2704695     17456552    1.6204E+01   4.2095E-04   2.3430E+00   9.1175E-02   3.9519E+00
+        2        2       51069       181748            0    0.0000E+00   1.2902E-04   8.1988E-01   1.6899E-06   0.0000E+00
+        3        3       98188       289801       191603    2.9082E-10   1.7469E-04   1.1822E+00   1.9109E-09   3.5517E+02
+        4        4       10555        10555            0    0.0000E+00   5.5394E-05   4.8174E-01   3.3268E-10   0.0000E+00
+
+           total        261698      3186799     17648155    1.6204E+01
+1dxtran diagnostics --  neutrons       nps =      101878                                                print table 150
+
+
+ dxtran sphere no. 1 located at x,y,z = 0.00000E+00 2.00500E+03 0.00000E+00
+                                             cumulative        weight           cumulative
+                                             fraction of       transmitted      fraction of
+  times average weight     transmissions     transmissions     per history      total weight
+
+         1.0000E-01          29777             0.22786         1.68530E-10        0.02579
+         1.0000E+00          63665             0.71504         1.13129E-09        0.19894
+         2.0000E+00           9613             0.78861         7.61117E-10        0.31544
+         5.0000E+00           7001             0.84218         1.17870E-09        0.49584
+         1.0000E+01           2411             0.86063         8.86886E-10        0.63158
+         1.0000E+02           1773             0.87420         2.02439E-09        0.94143
+         1.0000E+03             54             0.87461         3.82052E-10        0.99990
+         1.0000E+38              0             0.87461         0.00000E+00        0.99990
+  1st 200 histories          16386             1.00000         6.46675E-13        1.00000
+
+ average weight per history = 6.53361E-09       largest weight = 1.80973E-06
+ largest/average = 2.76988E+02                  nps of largest =       16789
+
+
+ contributions by cell
+
+        cell    misses      hits    weight per history    weight per hit
+
+     1     1  17427750    130680       6.53361E-09         5.09360E-09
+       total  17427750    130680       6.53361E-09         5.09360E-09
+
+
+ misses
+   russian roulette on dxc                  0
+   psc=0.                             3616476
+   russian roulette in transmission       10901031
+   underflow in transmission          2909024
+   hit a zero-importance cell            1219
+   time cutoff                              0
+   energy cutoff                            0
+   weight cutoff                            0
+
+1tally        1        nps =      101878
+           tally type 1    number of particles crossing a surface.                        
+           tally for  neutrons 
+ 
+ surface  1.2                                                                                                                          
+                 1.54656E-06 0.0914
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        1
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.09      yes          yes            0.04      yes          no            constant    random       8.02
+ passed?        yes          yes      yes          yes             yes      yes          no               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  1 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        1 with nps=      101878 print table 160
+
+
+ normed average tally per history  = 1.54656E-06          unnormed average tally per history  = 1.54656E-06
+ estimated tally relative error    = 0.0914               estimated variance of the variance  = 0.0384
+ relative error from zero tallies  = 0.0361               relative error from nonzero scores  = 0.0839
+
+ number of nonzero history tallies =         762          efficiency for the nonzero tallies  = 0.0075
+ history number of largest  tally  =       78765          largest  unnormalized history tally = 5.51333E-03
+ (largest  tally)/(average tally)  = 3.56491E+03          (largest  tally)/(avg nonzero tally)= 2.66638E+01
+
+ (confidence interval shift)/mean  = 0.0075               shifted confidence interval center  = 1.55815E-06
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            1.54656E-06             1.60066E-06                     0.034982
+      relative error                  9.13649E-02             9.45253E-02                     0.034591
+      variance of the variance        3.83746E-02             4.55315E-02                     0.186500
+      shifted center                  1.55815E-06             1.56013E-06                     0.001268
+      figure of merit                 5.87696E+01             5.49055E+01                    -0.065751
+
+ the estimated inverse power slope of the  38 largest  tallies starting at 1.15575E-03 is 8.0193
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (4.998E+04)*( 3.429E-02)**2 = (4.998E+04)*(1.176E-03) = 5.877E+01
+
+1unnormed tally density for tally        1          nonzero tally mean(m) = 2.068E-04   nps =      101878  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 8.0)
+  tally  number num den log den:d-----d-------d------d------d-------d------d------d-------d------d------d-------d------d------d-----
+ 1.00-16      1 1.97+11  11.294 ******|*******|******|******|*******|******|******|*******|******|******|*******|******|******|*****
+ 2.00-16      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 3.98-16      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 7.94-16      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 1.58-15      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 3.16-15      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 6.31-15      1 3.12+09   9.494 ******|*******|******|******|*******|******|******|*******|******|******|*******|******|      |     
+ 1.26-14      1 1.56+09   9.194 ******|*******|******|******|*******|******|******|*******|******|******|*******|****  |      |     
+ 2.51-14      1 7.83+08   8.894 ******|*******|******|******|*******|******|******|*******|******|******|*******|*     |      |     
+ 5.01-14      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 1.00-13      1 1.97+08   8.294 ******|*******|******|******|*******|******|******|*******|******|******|*****  |      |      |     
+ 2.00-13      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 3.98-13      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 7.94-13      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 1.58-12      1 1.24+07   7.094 ******|*******|******|******|*******|******|******|*******|******|***   |       |      |      |     
+ 3.16-12      1 6.22+06   6.794 ******|*******|******|******|*******|******|******|*******|******|*     |       |      |      |     
+ 6.31-12      3 9.36+06   6.971 ******|*******|******|******|*******|******|******|*******|******|**    |       |      |      |     
+ 1.26-11      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 2.51-11      1 7.83+05   5.894 ******|*******|******|******|*******|******|******|*******|*     |      |       |      |      |     
+ 5.01-11      1 3.93+05   5.594 ******|*******|******|******|*******|******|******|*******|      |      |       |      |      |     
+ 1.00-10      2 3.94+05   5.595 ******|*******|******|******|*******|******|******|*******|      |      |       |      |      |     
+ 2.00-10      0 0.00+00   0.000       |       |      |      |       |      |      |       |      |      |       |      |      |     
+ 3.98-10      1 4.94+04   4.694 ******|*******|******|******|*******|******|******|*      |      |      |       |      |      |     
+ 7.94-10      5 1.24+05   5.093 ******|*******|******|******|*******|******|******|****   |      |      |       |      |      |     
+ 1.58-09      4 4.97+04   4.696 ******|*******|******|******|*******|******|******|*      |      |      |       |      |      |     
+ 3.16-09      1 6.22+03   3.794 ******|*******|******|******|*******|******|*     |       |      |      |       |      |      |     
+ 6.31-09      5 1.56+04   4.193 ******|*******|******|******|*******|******|****  |       |      |      |       |      |      |     
+ 1.26-08      7 1.09+04   4.039 ******|*******|******|******|*******|******|***   |       |      |      |       |      |      |     
+ 2.51-08      7 5.48+03   3.739 ******|*******|******|******|*******|******|*     |       |      |      |       |      |      |     
+ 5.01-08      6 2.36+03   3.372 ******|*******|******|******|*******|***** |      |       |      |      |       |      |      |     
+ 1.00-07      7 1.38+03   3.139 ******|*******|******|******|*******|***   |      |       |      |      |       |      |      |     
+ 2.00-07     13 1.28+03   3.108 ******|*******|******|******|*******|***   |      |       |      |      |       |      |      |     
+ 3.98-07     22 1.09+03   3.036 ******|*******|******|******|*******|**    |      |       |      |      |       |      |      |     
+ 7.94-07     31 7.68+02   2.885 ******|*******|******|******|*******|*     |      |       |      |      |       |      |      |     
+ 1.58-06     46 5.71+02   2.757 ******|*******|******|******|*******|      |      |       |      |      |       |      |      |     
+ 3.16-06     53 3.30+02   2.518 ******|*******|******|******|*******|      |      |       |      |      |       |      |      |     
+ 6.31-06     55 1.72+02   2.234 ******|*******|******|******|*****  |      |      |       |      |      |       |      |      |     
+ 1.26-05     61 9.53+01   1.979 ******|*******|******|******|***    |      |      |       |      |      |       |      |      |     
+ 2.51-05     65 5.09+01   1.707 ******|*******|******|******|*      |      |      |       |      |      |       |      |      |     
+ 5.01-05     51 2.00+01   1.302 ******|*******|******|***** |       |      |      |       |      |      |       |      |      |     
+ 1.00-04     73 1.44+01   1.157 ******|*******|******|****  |       |      |      |       |      |      |       |      |      |     
+ 2.00-04     70 6.90+00   0.839 ******|*******|******|*     |       |      |      |       |      |      |       |      |      |     
+ 3.98-04     50 2.47+00   0.393 mmmmmm|mmmmmmm|mmmmm |      |       |      |      |       |      |      |       |      |      |     
+ 7.94-04     56 1.39+00   0.142 ******|*******|***   |      |       |      |      |       |      |      |       |      |      |     
+ 1.58-03     38 4.72-01  -0.326 ******|*******|      |  s   |       |      |      |       |      |      |       |      |      |     
+ 3.16-03     18 1.12-01  -0.951 ******|***    |     s|      |       |      |      |       |      |      |       |      |      |     
+ 6.31-03      2 6.24-03  -2.205 *     |      s|      |      |       |      |      |       |      |      |       |      |      |     
+  total     761 7.47-03         d-----d-------d------d------d-------d------d------d-------d------d------d-------d------d------d-----
+ a total of           1 tallies were below the score grid bin boundaries.
+
+1tally        4        nps =      101878
+           tally type 4    track length estimate of particle flux.      units   1/cm**2   
+           tally for  neutrons 
+
+           volumes 
+                   cell:       3                                                                                   
+                         3.14159E+05
+ 
+ cell  3                                                                                                                               
+                 2.07513E-13 0.0886
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.09      yes          yes            0.04      yes          no            constant    random       5.65
+ passed?        yes          yes      yes          yes             yes      yes          no               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  1 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        4 with nps=      101878 print table 160
+
+
+ normed average tally per history  = 2.07513E-13          unnormed average tally per history  = 6.51921E-08
+ estimated tally relative error    = 0.0886               estimated variance of the variance  = 0.0370
+ relative error from zero tallies  = 0.0146               relative error from nonzero scores  = 0.0873
+
+ number of nonzero history tallies =        4505          efficiency for the nonzero tallies  = 0.0442
+ history number of largest  tally  =       78765          largest  unnormalized history tally = 2.15404E-04
+ (largest  tally)/(average tally)  = 3.30414E+03          (largest  tally)/(avg nonzero tally)= 1.46108E+02
+
+ (confidence interval shift)/mean  = 0.0072               shifted confidence interval center  = 2.09002E-13
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            2.07513E-13             2.14241E-13                     0.032422
+      relative error                  8.85535E-02             9.13400E-02                     0.031467
+      variance of the variance        3.70454E-02             4.27736E-02                     0.154628
+      shifted center                  2.09002E-13             2.09224E-13                     0.001060
+      figure of merit                 6.25605E+01             5.88017E+01                    -0.060082
+
+ the estimated inverse power slope of the 200 largest  tallies starting at 5.50868E-06 is 5.6533
+ the large score tail of the empirical history score probability density function appears to have no unsampled regions.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (4.998E+04)*( 3.538E-02)**2 = (4.998E+04)*(1.252E-03) = 6.256E+01
+
+1unnormed tally density for tally        4          nonzero tally mean(m) = 1.474E-06   nps =      101878  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 5.7)
+  tally  number num den log den:d-----d-------d------d------d------d-------d------d------d-------d------d------d-------d------d-----
+ 2.51-18      1 7.83+12  12.894 ******|*******|******|******|******|*******|******|******|*******|******|******|*******|******|*****
+ 5.01-18      1 3.93+12  12.594 ******|*******|******|******|******|*******|******|******|*******|******|******|*******|******|***  
+ 1.00-17      1 1.97+12  12.294 ******|*******|******|******|******|*******|******|******|*******|******|******|*******|******|*    
+ 2.00-17      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 3.98-17      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 7.94-17      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 1.58-16      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 3.16-16      1 6.22+10  10.794 ******|*******|******|******|******|*******|******|******|*******|******|******|*****  |      |     
+ 6.31-16      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 1.26-15      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 2.51-15      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 5.01-15     24 9.42+10  10.974 ******|*******|******|******|******|*******|******|******|*******|******|******|****** |      |     
+ 1.00-14      2 3.94+09   9.595 ******|*******|******|******|******|*******|******|******|*******|******|***   |       |      |     
+ 2.00-14      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 3.98-14      7 3.46+09   9.539 ******|*******|******|******|******|*******|******|******|*******|******|***   |       |      |     
+ 7.94-14      1 2.48+08   8.394 ******|*******|******|******|******|*******|******|******|*******|*     |      |       |      |     
+ 1.58-13      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 3.16-13      2 1.24+08   8.095 ******|*******|******|******|******|*******|******|******|*******|      |      |       |      |     
+ 6.31-13      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 1.26-12      0 0.00+00   0.000       |       |      |      |      |       |      |      |       |      |      |       |      |     
+ 2.51-12      4 3.13+07   7.496 ******|*******|******|******|******|*******|******|******|***    |      |      |       |      |     
+ 5.01-12      4 1.57+07   7.196 ******|*******|******|******|******|*******|******|******|       |      |      |       |      |     
+ 1.00-11     10 1.97+07   7.294 ******|*******|******|******|******|*******|******|******|*      |      |      |       |      |     
+ 2.00-11     49 4.83+07   7.684 ******|*******|******|******|******|*******|******|******|****   |      |      |       |      |     
+ 3.98-11     16 7.91+06   6.898 ******|*******|******|******|******|*******|******|***** |       |      |      |       |      |     
+ 7.94-11     15 3.72+06   6.570 ******|*******|******|******|******|*******|******|***   |       |      |      |       |      |     
+ 1.58-10      6 7.45+05   5.872 ******|*******|******|******|******|*******|***** |      |       |      |      |       |      |     
+ 3.16-10      6 3.73+05   5.572 ******|*******|******|******|******|*******|***   |      |       |      |      |       |      |     
+ 6.31-10     71 2.21+06   6.345 ******|*******|******|******|******|*******|******|*     |       |      |      |       |      |     
+ 1.26-09     15 2.34+05   5.370 ******|*******|******|******|******|*******|*     |      |       |      |      |       |      |     
+ 2.51-09    110 8.62+05   5.935 ******|*******|******|******|******|*******|***** |      |       |      |      |       |      |     
+ 5.01-09     93 3.65+05   5.562 ******|*******|******|******|******|*******|***   |      |       |      |      |       |      |     
+ 1.00-08   1927 3.79+06   6.579 ******|*******|******|******|******|*******|******|***   |       |      |      |       |      |     
+ 2.00-08    495 4.88+05   5.689 ******|*******|******|******|******|*******|***   |      |       |      |      |       |      |     
+ 3.98-08    475 2.35+05   5.371 ******|*******|******|******|******|*******|*     |      |       |      |      |       |      |     
+ 7.94-08    267 6.61+04   4.820 ******|*******|******|******|******|*****  |      |      |       |      |      |       |      |     
+ 1.58-07    201 2.50+04   4.397 ******|*******|******|******|******|**     |      |      |       |      |      |       |      |     
+ 3.16-07    142 8.84+03   3.946 ******|*******|******|******|******|       |      |      |       |      |      |       |      |     
+ 6.31-07    115 3.59+03   3.555 ******|*******|******|******|***   |       |      |      |       |      |      |       |      |     
+ 1.26-06     86 1.34+03   3.128 ******|*******|******|******|      |       |      |      |       |      |      |       |      |     
+ 2.51-06     71 5.56+02   2.745 mmmmmm|mmmmmmm|mmmmmm|mmmm  |      |       |      |      |       |      |      |       |      |     
+ 5.01-06     75 2.94+02   2.469 ******|*******|******|**    |      |       |      |      |       |      |      |       |      |     
+ 1.00-05     58 1.14+02   2.057 ******|*******|******|      | s    |       |      |      |       |      |      |       |      |     
+ 2.00-05     54 5.33+01   1.726 ******|*******|****  |      |s     |       |      |      |       |      |      |       |      |     
+ 3.98-05     52 2.57+01   1.410 ******|*******|*     |     s|      |       |      |      |       |      |      |       |      |     
+ 7.94-05     37 9.17+00   0.962 ******|****** |      | s    |      |       |      |      |       |      |      |       |      |     
+ 1.58-04      9 1.12+00   0.048 ******|       |  s   |      |      |       |      |      |       |      |      |       |      |     
+ 2.51-04      2 2.12-01  -0.674 *     |    s  |      |      |      |       |      |      |       |      |      |       |      |     
+  total    4505 4.42-02         d-----d-------d------d------d------d-------d------d------d-------d------d------d-------d------d-----
+
+1tally        5        nps =      101878
+           tally type 5    particle flux at a point detector.           units   1/cm**2   
+           tally for  neutrons 
+ 
+ detector located at x,y,z = 2.00000E+02 2.00500E+03 0.00000E+00
+                 3.58092E-16 0.0996
+ 
+ detector located at x,y,z = 2.00000E+02 2.00500E+03 0.00000E+00
+ uncollided neutron flux
+                 0.00000E+00 0.0000
+ 
+ detector score diagnostics                  cumulative          tally         cumulative
+                                             fraction of         per           fraction of
+   times average score     transmissions     transmissions       history       total tally
+        1.00000E-01              15466         0.17663        4.76760E-18        0.01331
+        1.00000E+00              37241         0.60193        3.99663E-17        0.12492
+        2.00000E+00               6199         0.67273        2.65080E-17        0.19895
+        5.00000E+00               5258         0.73278        4.93319E-17        0.33671
+        1.00000E+01               2238         0.75833        4.56425E-17        0.46417
+        1.00000E+02               2057         0.78183        1.35864E-16        0.84358
+        1.00000E+03                123         0.78323        5.02890E-17        0.98402
+        1.00000E+38                 13         0.78338        5.71373E-18        0.99997
+  1st 200 histories              18968         1.00000        9.13092E-21        1.00000
+
+ average tally per history = 3.58092E-16            largest score = 4.04216E-13
+ (largest score)/(average tally) = 1.12881E+03      nps of largest score =       59041
+
+ score contributions by cell
+        cell      misses        hits    tally per history    weight per hit
+     1     1    17558430           0       0.00000E+00         0.00000E+00
+     3     3      104040       87563       3.58092E-16         4.16634E-16
+       total    17662470       87563       3.58092E-16         4.16634E-16
+
+ score misses
+   russian roulette on pd            17558430
+   psc=0.                               38746
+   russian roulette in transmission     65294
+   underflow in transmission                0
+   hit a zero-importance cell               0
+   energy cutoff                            0
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        5
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.05      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.10      yes          yes            0.04      yes          no            constant    random       7.71
+ passed?        yes           no      yes          yes             yes      yes          no               yes        yes         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        5 with nps=      101878 print table 160
+
+
+ normed average tally per history  = 3.58092E-16          unnormed average tally per history  = 3.58092E-16
+ estimated tally relative error    = 0.0996               estimated variance of the variance  = 0.0396
+ relative error from zero tallies  = 0.0197               relative error from nonzero scores  = 0.0976
+
+ number of nonzero history tallies =        2501          efficiency for the nonzero tallies  = 0.0245
+ history number of largest  tally  =       64323          largest  unnormalized history tally = 1.35960E-12
+ (largest  tally)/(average tally)  = 3.79680E+03          (largest  tally)/(avg nonzero tally)= 9.32075E+01
+
+ (confidence interval shift)/mean  = 0.0085               shifted confidence interval center  = 3.61139E-16
+
+
+ if the largest  history score sampled so far were to occur on the next history, the tfc bin quantities would change as follows:
+
+      estimated quantities           value at nps           value at nps+1           value(nps+1)/value(nps)-1.
+
+      mean                            3.58092E-16             3.71434E-16                     0.037258
+      relative error                  9.95794E-02             1.02501E-01                     0.029342
+      variance of the variance        3.95924E-02             4.55411E-02                     0.150246
+      shifted center                  3.61139E-16             3.61584E-16                     0.001232
+      figure of merit                 4.94735E+01             4.66931E+01                    -0.056199
+
+ the estimated inverse power slope of the 125 largest  tallies starting at 7.06574E-14 is 7.7079
+ the history score probability density function appears to have an unsampled region at the largest  history scores:
+ please examine. see print table 161.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (4.998E+04)*( 3.146E-02)**2 = (4.998E+04)*(9.899E-04) = 4.947E+01
+
+1unnormed tally density for tally        5          nonzero tally mean(m) = 1.459E-14   nps =      101878  print table 161
+
+ abscissa              ordinate   log plot of tally probability density function in tally fluctuation chart bin(d=decade,slope= 7.7)
+  tally  number num den log den:d----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d----
+ 2.00-29      1 9.86+23  23.994 *****************|*****************|*****************|*****************|*****************|**********
+ 3.98-29      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 7.94-29      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 1.58-28      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 3.16-28      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 6.31-28      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 1.26-27      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 2.51-27      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 5.01-27      1 3.93+21  21.594 *****************|*****************|*****************|*****************|**************   |          
+ 1.00-26      1 1.97+21  21.294 *****************|*****************|*****************|*****************|************     |          
+ 2.00-26      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 3.98-26      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 7.94-26      1 2.48+20  20.394 *****************|*****************|*****************|*****************|******           |          
+ 1.58-25      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 3.16-25      1 6.22+19  19.794 *****************|*****************|*****************|*****************|***              |          
+ 6.31-25      1 3.12+19  19.494 *****************|*****************|*****************|*****************|*                |          
+ 1.26-24      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 2.51-24      1 7.83+18  18.894 *****************|*****************|*****************|***************  |                 |          
+ 5.01-24      5 1.96+19  19.293 *****************|*****************|*****************|*****************|                 |          
+ 1.00-23      5 9.84+18  18.993 *****************|*****************|*****************|**************** |                 |          
+ 2.00-23      7 6.90+18  18.839 *****************|*****************|*****************|***************  |                 |          
+ 3.98-23      7 3.46+18  18.539 *****************|*****************|*****************|*************    |                 |          
+ 7.94-23      5 1.24+18  18.093 *****************|*****************|*****************|***********      |                 |          
+ 1.58-22      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 3.16-22      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 6.31-22      0 0.00+00   0.000                  |                 |                 |                 |                 |          
+ 1.26-21      2 3.13+16  16.495 *****************|*****************|*****************|*                |                 |          
+ 2.51-21      2 1.57+16  16.195 *****************|*****************|*****************|                 |                 |          
+ 5.01-21      5 1.96+16  16.293 *****************|*****************|*****************|                 |                 |          
+ 1.00-20     16 3.15+16  16.498 *****************|*****************|*****************|*                |                 |          
+ 2.00-20     21 2.07+16  16.316 *****************|*****************|*****************|                 |                 |          
+ 3.98-20     25 1.24+16  16.092 *****************|*****************|*****************|                 |                 |          
+ 7.94-20     17 4.21+15  15.624 *****************|*****************|**************   |                 |                 |          
+ 1.58-19     14 1.74+15  15.240 *****************|*****************|************     |                 |                 |          
+ 3.16-19      3 1.87+14  14.271 *****************|*****************|******           |                 |                 |          
+ 6.31-19     26 8.11+14  14.909 *****************|*****************|**********       |                 |                 |          
+ 1.26-18     23 3.60+14  14.556 *****************|*****************|*******          |                 |                 |          
+ 2.51-18     18 1.41+14  14.149 *****************|*****************|*****            |                 |                 |          
+ 5.01-18     21 8.25+13  13.916 *****************|*****************|****             |                 |                 |          
+ 1.00-17     19 3.74+13  13.573 *****************|*****************|**               |                 |                 |          
+ 2.00-17     68 6.71+13  13.826 *****************|*****************|***              |                 |                 |          
+ 3.98-17    919 4.54+14  14.657 *****************|*****************|********         |                 |                 |          
+ 7.94-17    311 7.70+13  13.887 *****************|*****************|***              |                 |                 |          
+ 1.58-16    192 2.38+13  13.377 *****************|*****************|                 |                 |                 |          
+ 3.16-16    135 8.40+12  12.924 *****************|**************** |                 |                 |                 |          
+ 6.31-16    115 3.59+12  12.555 *****************|*************    |                 |                 |                 |          
+ 1.26-15     81 1.27+12  12.102 *****************|***********      |                 |                 |                 |          
+ 2.51-15     64 5.01+11  11.700 *****************|********         |                 |                 |                 |          
+ 5.01-15     58 2.28+11  11.357 *****************|******           |                 |                 |                 |          
+ 1.00-14     55 1.08+11  11.034 *****************|****             |                 |                 |                 |          
+ 2.00-14     40 3.94+10  10.596 mmmmmmmmmmmmmmmmm|mm               |                 |                 |                 |          
+ 3.98-14     45 2.22+10  10.347 *****************|                 |                 |                 |                 |          
+ 7.94-14     54 1.34+10  10.126 *****************|        s        |                 |                 |                 |          
+ 1.58-13     44 5.46+09   9.737 ***************  |       s         |                 |                 |                 |          
+ 3.16-13     36 2.24+09   9.350 ************     |     s           |                 |                 |                 |          
+ 6.31-13     28 8.73+08   8.941 **********       |  s              |                 |                 |                 |          
+ 1.26-12      6 9.38+07   7.972 ****           s |                 |                 |                 |                 |          
+ 1.58-12      1 3.01+07   7.479 *         s      |                 |                 |                 |                 |          
+  total    2500 2.45-02         d----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d-----d----
+ a total of           1 tallies were below the score grid bin boundaries.
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+        1   missed  1 of 10 tfc bin checks: the variance of the variance appears not to decrease as 1/nps for the last half of problem
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+        4   missed  1 of 10 tfc bin checks: the variance of the variance appears not to decrease as 1/nps for the last half of problem
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+        5   missed  2 of 10 tfc bin checks: the relative error exceeds the recommended value of 0.05 for point detector tallies       
+         missed all bin error check:     2 tally bins had     1 bins with zeros and     1 bins with relative errors exceeding 0.05
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ the tally bins with zeros may or may not be correct: compare the source, cutoffs, multipliers, et cetera with the tally bins.
+
+ warning.       3 of the     3 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.       1 of the     3 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
+
+                            tally        1                          tally        4                          tally        5
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+         8000   1.2465E-06 0.3787 0.4739  0.0      42   1.7234E-13 0.3584 0.3922  1.5      47   2.7151E-16 0.3569 0.3072  0.0      47
+        16000   1.1693E-06 0.2995 0.2084  0.0      36   1.5830E-13 0.2901 0.2019  1.5      38   2.7466E-16 0.3105 0.2063  1.6      34
+        24000   1.2684E-06 0.2196 0.1191  0.0      46   1.6946E-13 0.2119 0.1197  1.9      49   2.9528E-16 0.2303 0.1201  3.0      42
+        32000   1.4169E-06 0.1695 0.0779  0.0      55   1.8730E-13 0.1638 0.0794  2.5      59   3.2631E-16 0.1752 0.0816 10.0      51
+        40000   1.4502E-06 0.1436 0.0597  0.0      63   1.9455E-13 0.1374 0.0597  3.3      69   3.2581E-16 0.1520 0.0642 10.0      56
+        48000   1.4035E-06 0.1306 0.0511  0.0      61   1.8971E-13 0.1254 0.0500  3.0      67   3.1601E-16 0.1390 0.0545  7.8      54
+        56000   1.4766E-06 0.1181 0.0415  0.0      62   1.9844E-13 0.1134 0.0398  3.4      67   3.3811E-16 0.1265 0.0446 10.0      54
+        64000   1.4495E-06 0.1100 0.0364 10.0      64   1.9635E-13 0.1067 0.0355  3.6      68   3.3673E-16 0.1198 0.0388 10.0      54
+        72000   1.5335E-06 0.1048 0.0329 10.0      63   2.0835E-13 0.1031 0.0368  3.3      65   3.5978E-16 0.1191 0.0590  9.5      48
+        80000   1.5548E-06 0.1049 0.0524  5.4      56   2.1085E-13 0.1021 0.0492  3.3      59   3.6591E-16 0.1133 0.0515  7.4      48
+        88000   1.5382E-06 0.0994 0.0469  4.8      57   2.0676E-13 0.0971 0.0450  3.4      60   3.5808E-16 0.1081 0.0471  8.8      49
+        96000   1.5823E-06 0.0942 0.0393  7.5      59   2.1149E-13 0.0915 0.0382  4.7      62   3.6416E-16 0.1032 0.0406  9.9      49
+       101878   1.5466E-06 0.0914 0.0384  8.0      59   2.0751E-13 0.0886 0.0370  5.7      63   3.5809E-16 0.0996 0.0396  7.7      49
+
+      2178 particles escaped wwg mesh.
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file ww4_r     nps =      101878     coll =       17648155     ctm =        2.04   nrn =        
+ 410658542
+
+        14 warning messages so far.
+
+
+ run terminated when it had used  2.0  minutes of computer time.
+
+ computer time =    2.07 minutes
+
+ mcnp     version 5     09282010                     05/02/13 17:14:03                     probid =  05/02/13 17:12:56 
