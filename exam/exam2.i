@@ -153,8 +153,18 @@ fm34  1e6 $ 1e9[p/s] * 1e-3[mrem/rem]
     Doorway:    2.83749E-08 0.1228
     Window:     2.87015E-08 0.1667
     Back wall:  2.43898E-10 0.4524
-7. Dose with source directed downwards instead of upwards
+7. Dose with source directed downwards instead of upwards [mrem/h]
     Total:      1.16045E-06 0.0668
     Doorway:    3.39318E-08 0.1197
     Window:     1.65314E-09 0.6138
     Back wall:  8.05610E-10 0.4537
+    
+   These doses yield the following differences [mrem/h]
+    Total:       1.76372E-07
+    Doorway:     5.55690E-09
+    Window:     -2.70484E-08
+    Back wall:   5.61712E-10
+
+   We note that the total dose has increased along with the dose
+    from the doorway and back wall, while the dose from the window
+    has decreased.
