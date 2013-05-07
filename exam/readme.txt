@@ -1,4 +1,4 @@
-The mcnp5 input file "exam2.i" contains all required answers and code.
+The mcnp5 input file "klebenow_506_exam2.i" contains all required answers/code.
 The mcnp5 output files "qi" contain the mcnp5 output that generated
     responses to question i.
 
