@@ -7,7 +7,7 @@ C Cell cards
 c blank line
 C Surface cards
 1 rpp -10 10 -10 10 0 10
-2 rpp -100 100 -100 100 -100 100
+2 rpp -11 11 -11 11 -1.00001 11
  
 c blank line
 C Data cards
