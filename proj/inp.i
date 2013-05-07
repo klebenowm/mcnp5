@@ -11,6 +11,7 @@ C Surface cards
  
 c blank line
 C Data cards
+prdmp 2j -1
 imp:n 1 1 0
 c Materials
 m1 26056 1 $ Fe-56
