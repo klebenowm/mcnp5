@@ -11,7 +11,7 @@ C Surface cards
  
 c blank line
 C Data cards
-prdmp 2j -1
+prdmp 2j 1
 imp:n 1 1 0
 c Materials
 m1 26056 1 $ Fe-56
@@ -21,10 +21,10 @@ si1 -5 5
 sp1 0 1
 si2 -5 5
 sp2 0 1
-si3 1.0000100E-11 1.9640300E+01
+si3 1.0000100E-07 1.9640300E+01
 sp3 0 1
 c Runtime information
-ctme 2
+ctme 4
 c Tally Information
 c flux tally
 f4:n 1
