@@ -1,0 +1,598 @@
+          Thread Name & Version = MCNP5, 1.60
+                                  _                                      
+            ._ _    _  ._   ._   |_                                      
+            | | |  (_  | |  |_)   _)                                     
+                            |                                            
+  +---------------------------------------------------------------------+
+  | Copyright 2010. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Los Energy. The Government is granted for itself and  |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2010, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 5     ld=09282010                     05/07/13 16:02:56 
+ *************************************************************************                 probid =  05/07/13 16:02:56 
+ i=exam2.i tasks 2                                                               
+
+         1-       Starting file for Exam #2 in NE/MP 506                                          
+         2-       C Cells                                                                         
+         3-       C room spaces                                                                   
+         4-       1 1 -1e-3  ( 1  -2   3  -4   5  -6 : $ room filled with air @ 1e-3 g/cc         
+         5-                   25 -26  24 -23  32  -5 ) $   including piece next to window         
+         6-       2 1 -1e-3  ( 1  -2  13  -4   7 -15 #20 : $ control room filled with air         
+         7-                   25 -26  24 -23  15 -31 ) $   including piece next to window         
+         8-       3 1 -1e-3    1  -2  22 -21  15  -5   $ doorway                                  
+         9-       C Floor, celing and walls                                                       
+        10-       11 2 -2.3   11  -1  13 -14  17 -16 $ floor slab                                 
+        11-       12 2 -2.3    2 -12  13 -14  17 -16 $ ceiling slab                               
+        12-       13 2 -2.3    1  -2  13  -3  15 -16 $ left wall (incl. opening to control room)  
+        13-       14 2 -2.3    1  -2   4 -14  17 -16 $ right wal                                  
+        14-       15 2 -2.3    1  -2   3  -4   6 -16 $ back wall                                  
+        15-       16 2 -2.3    1  -2  21  -4  15  -5 $ right of door                              
+        16-       17 2 -2.3    1  -2   3 -22  15  -5 $ around window                              
+        17-                 (-25: 26: 23:-24)        $    excluding window space                  
+        18-       18 2 -2.3    1  -2  13  -4  17  -7 $ control room wall                          
+        19-       C Window                                                                        
+        20-       19 3 -2.5   25 -26  24 -23  31 -32 $ window                                     
+        21-       C Operator                                                                      
+        22-       20 4 -1     -40                                                                 
+        23-       C boundary                                                                      
+        24-       100 0      -11: 12:-13: 14:-17: 16                                              
+        25-       C                                                                               
+        26-                                                                                       
+        27-       C Surfaces                                                                      
+        28-       C inner walls of treatment room                                                 
+        29-       1 pz 0         $ floor                                                          
+        30-       2 pz 300       $ ceiling                                                        
+        31-       3 px -200      $ left                                                           
+        32-       4 px  200      $ right                                                          
+        33-       5 py -200      $ shared wall                                                    
+        34-       6 py  200      $ back                                                           
+        35-       C outer walls of whole space                                                    
+        36-       11 pz -30      $ outside floor                                                  
+        37-       12 pz 330      $ outside ceiling                                                
+        38-       13 px -230     $ outside left                                                   
+        39-       14 px  230     $ outside right                                                  
+        40-       16 py  230     $ outside back                                                   
+        41-       17 py -380     $ outside control room                                           
+        42-       C inner walls of control room                                                   
+        43-       7 py -350      $ control room wall                                              
+        44-       15 py -230     $ shared wall                                                    
+        45-       C door jams and window frames                                                   
+        46-       21 px 150      $ right door jam                                                 
+        47-       22 px 50       $ left door jam                                                  
+        48-       23 px  -50     $ right window frame                                             
+        49-       24 px  -150    $ left window frame                                              
+        50-       25 pz  100     $ bottom window frame                                            
+        51-       26 pz  250     $ top window frame                                               
+        52-       C window pane                                                                   
+        53-       31 py  -220    $ control room side                                              
+        54-       32 py  -210    $ treatment room side                                            
+        55-       C operator approximation                                                        
+        56-       c 40 rcc -100 -290 0      0 0 185     25 $ original posn                        
+        57-       40 rcc 0 -290 0     0 0 185     25 $ between door and window                    
+        58-       C                                                                               
+        59-                                                                                       
+        60-       C Data                                                                          
+        61-       mode p                                                                          
+        62-       imp:n 1 12r 0                                                                   
+        63-       C source definition                                                             
+        64-       C center of room xy, 1m from floor z                                            
+        65-       C isotropic direction pointed upwards                                           
+        66-       C 6MeV                                                                          
+        67-       c sdef pos=0 0 100 vec=0 0 1 dir=d1 erg=6 $ Source upwards                      
+        68-       sdef pos=0 0 100 vec=0 0 1 dir=d2 erg=6 $ Source downwards                      
+        69-       si1 0 1                                                                         
+        70-       sp1 0 1                                                                         
+        71-       si2 -1 0                                                                        
+        72-       sp2 0 1                                                                         
+        73-       print 110                                                                       
+        74-       C                                                                               
+        75-       nps 1e5                                                                         
+        76-       C MATERIALS                                                                     
+        77-       C air                                                                           
+        78-       m1     7014  72 $ 72% N                                                         
+        79-              8016  28 $ 28% O                                                         
+        80-       m2     8016 -0.45                                                               
+        81-              1001 -0.1                                                                
+        82-             11023 -0.02                                                               
+        83-             14028 -0.28                                                               
+        84-             13027 -0.05                                                               
+        85-             19039 -0.02                                                               
+        86-             20040 -0.08                                                               
+        87-       C glass                                                                         
+        88-       m3    14028  1 $ Si                                                             
+        89-              8016  2 $ O2                                                             
+        90-       m4     1001  2                                                                  
+        91-              8016  1                                                                  
+        92-       C                                                                               
+        93-       C                                                                               
+        94-       C TALLIES                                                                       
+        95-       C     Energies for ICRP-21 Photon Flux-to-Dose Conversion Factors               
+        96-       C     (MeV)                                                                     
+        97-       C     0.01 0.015 0.02 0.03 0.04 0.05 0.06 0.08                                  
+        98-       C     0.1  0.15  0.2  0.3  0.4  0.5  0.6  0.8                                   
+        99-       C     1.0  1.5   2.0  3.0  4.0  5.0  6.0  8.0                                   
+       100-       C     10                                                                        
+       101-       C     Does response for for ICRP-21 Photon Flux-to-Dose Conversion Factors      
+       102-       C     (rem/hr)/(p/cm^2.s)                                                       
+       103-       C     2.78e-6 1.11e-6 5.88e-7 2.56e-7 1.56e-7 1.20e-7 1.11e-7 1.20e-7           
+       104-       C     1.47e-7 2.38e-7 3.45e-7 5.56e-7 7.69e-7 9.09e-7 1.14e-6 1.47e-6           
+       105-       C     1.79e-6 2.44e-6 3.03e-6 4.00e-6 4.76e-6 5.56e-6 6.25e-6 7.69e-6           
+       106-       C     9.09e-6                                                                   
+       107-       C                                                                               
+       108-       c energy-dose response function                                                 
+       109-       de   0.01 0.015 0.02 0.03 0.04 0.05 0.06 0.08                                   
+       110-            0.1  0.15  0.2  0.3  0.4  0.5  0.6  0.8                                    
+       111-            1.0  1.5   2.0  3.0  4.0  5.0  6.0  8.0                                    
+       112-            10                                                                         
+       113-       df   2.78e-6 1.11e-6 5.88e-7 2.56e-7 1.56e-7 1.20e-7 1.11e-7 1.20e-7            
+       114-            1.47e-7 2.38e-7 3.45e-7 5.56e-7 7.69e-7 9.09e-7 1.14e-6 1.47e-6            
+       115-            1.79e-6 2.44e-6 3.03e-6 4.00e-6 4.76e-6 5.56e-6 6.25e-6 7.69e-6            
+       116-            9.09e-6                                                                    
+       117-       C Question 4 tally                                                              
+       118-       fc4 Dose given to operator [mrem/h]                                             
+       119-       f4:p 20 $ Flux through operator                                                 
+       120-       fm4  1e6 $ 1e9[p/s] * 1e-3[mrem/rem]                                            
+       121-       C Question 5 tallies                                                            
+       122-       c Passes through doorway                                                        
+       123-       fc14 Dose given to operator that passes through doorway [mrem/h]                
+       124-       f14:p 20                                                                        
+       125-       cf14 3                                                                          
+       126-       fm14  1e6 $ 1e9[p/s] * 1e-3[mrem/rem]                                           
+       127-       c Passes through window                                                         
+       128-       fc24 Dose given to operator that passes through window [mrem/h]                 
+       129-       f24:p 20                                                                        
+       130-       cf24 19                                                                         
+       131-       fm24  1e6 $ 1e9[p/s] * 1e-3[mrem/rem]                                           
+       132-       c Scatters back from the back wall of the control room                          
+       133-       fc34 Dose given to operator that scatters from back wall [mrem/h]               
+       134-       f34:p 20                                                                        
+       135-       cf34 15                                                                         
+       136-       fm34  1e6 $ 1e9[p/s] * 1e-3[mrem/rem]                                           
+       137-                                                                                       
+ 
+  comment.  photon   importances have been set equal to 1.
+
+ surface        1   and surface       40.3 are the same.       40.3 will be deleted.
+ 
+  comment.           1 surfaces were deleted for being the same as others.
+ 
+  warning.  source distribution        1 is not used in this problem.
+ 
+  warning.    3 materials had unnormalized fractions. print table 40.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron    photon                           
+              cell     mat    density     density     volume       mass            pieces importance importance                        
+
+        1        1        1  4.13579E-05 1.00000E-03 4.81500E+07 4.81500E+04           0  1.0000E+00 1.0000E+00                        
+        2        2        1  4.13579E-05 1.00000E-03 0.00000E+00 0.00000E+00           0  1.0000E+00 1.0000E+00                        
+        3        3        1  4.13579E-05 1.00000E-03 9.00000E+05 9.00000E+02           0  1.0000E+00 1.0000E+00                        
+        4       11        2  1.97517E-01 2.30000E+00 8.41800E+06 1.93614E+07           0  1.0000E+00 1.0000E+00                        
+        5       12        2  1.97517E-01 2.30000E+00 8.41800E+06 1.93614E+07           0  1.0000E+00 1.0000E+00                        
+        6       13        2  1.97517E-01 2.30000E+00 4.14000E+06 9.52200E+06           0  1.0000E+00 1.0000E+00                        
+        7       14        2  1.97517E-01 2.30000E+00 5.49000E+06 1.26270E+07           0  1.0000E+00 1.0000E+00                        
+        8       15        2  1.97517E-01 2.30000E+00 3.60000E+06 8.28000E+06           0  1.0000E+00 1.0000E+00                        
+        9       16        2  1.97517E-01 2.30000E+00 4.50000E+05 1.03500E+06           0  1.0000E+00 1.0000E+00                        
+       10       17        2  1.97517E-01 2.30000E+00 1.80000E+06 4.14000E+06           0  1.0000E+00 1.0000E+00                        
+       11       18        2  1.97517E-01 2.30000E+00 3.87000E+06 8.90100E+06           0  1.0000E+00 1.0000E+00                        
+       12       19        3  7.53173E-02 2.50000E+00 1.50000E+05 3.75000E+05           0  1.0000E+00 1.0000E+00                        
+       13       20        4  1.00309E-01 1.00000E+00 3.63247E+05 3.63247E+05           1  1.0000E+00 1.0000E+00                        
+       14      100        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00 0.0000E+00                        
+
+ total                                               8.57492E+07 8.40151E+07
+
+    minimum source weight = 1.0000E+00    maximum source weight = 1.0000E+00
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         2 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file c00740/mcplib04                                                 
+
+   1000.04p    1898  ENDF/B-VI Release 8 Photoatomic Data for 1-H                                 mat 100      02/07/03
+   7000.04p    3194  ENDF/B-VI Release 8 Photoatomic Data for 7-N                                 mat 700      02/07/03
+   8000.04p    3272  ENDF/B-VI Release 8 Photoatomic Data for 8-O                                 mat 800      02/07/03
+  11000.04p    3995  ENDF/B-VI Release 8 Photoatomic Data for 11-NA                               mat1100      02/07/03
+  13000.04p    4846  ENDF/B-VI Release 8 Photoatomic Data for 13-AL                               mat1300      02/07/03
+  14000.04p    4792  ENDF/B-VI Release 8 Photoatomic Data for 14-SI                               mat1400      02/07/03
+  19000.04p    5047  ENDF/B-VI Release 8 Photoatomic Data for 19-K                                mat1900      02/07/03
+  20000.04p    5013  ENDF/B-VI Release 8 Photoatomic Data for 20-CA                               mat2000      02/07/03
+
+  total       32057
+
+ maximum photon energy set to  100.0 mev (maximum electron energy)
+
+                        tables from file c00740/el03                                                     
+
+   1000.03e    2329                                                                                          6/6/98    
+   7000.03e    2333                                                                                          6/6/98    
+   8000.03e    2333                                                                                          6/6/98    
+  11000.03e    2337                                                                                          6/6/98    
+  13000.03e    2337                                                                                          6/6/98    
+  14000.03e    2339                                                                                          6/6/98    
+  19000.03e    2343                                                                                          6/6/98    
+  20000.03e    2343                                                                                          6/6/98    
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file runtpe     nps =           0     coll =              0     ctm =        0.00   nrn =             
+    0
+
+         2 warning messages so far.
+1   starting mcrun.      cp0 =  0.01         print table 110
+
+      Starting file for Exam #2 in NE/MP 506                                          
+
+
+     nps    x          y          z          cell       surf     u          v          w        energy     weight     time
+ 
+      1  0.000E+00  0.000E+00  1.000E+02        1         25  5.845E-01 -7.682E-01 -2.613E-01  6.000E+00  1.000E+00  0.000E+00
+      2  0.000E+00  0.000E+00  1.000E+02        1         25  1.678E-01  1.806E-02 -9.857E-01  6.000E+00  1.000E+00  0.000E+00
+      3  0.000E+00  0.000E+00  1.000E+02        1         25 -2.403E-01  9.269E-01 -2.883E-01  6.000E+00  1.000E+00  0.000E+00
+      4  0.000E+00  0.000E+00  1.000E+02        1         25 -6.553E-02  7.837E-01 -6.176E-01  6.000E+00  1.000E+00  0.000E+00
+      5  0.000E+00  0.000E+00  1.000E+02        1         25  8.171E-02 -4.840E-01 -8.712E-01  6.000E+00  1.000E+00  0.000E+00
+      6  0.000E+00  0.000E+00  1.000E+02        1         25  2.908E-01 -7.788E-01 -5.557E-01  6.000E+00  1.000E+00  0.000E+00
+      7  0.000E+00  0.000E+00  1.000E+02        1         25  8.648E-01 -1.144E-01 -4.889E-01  6.000E+00  1.000E+00  0.000E+00
+      8  0.000E+00  0.000E+00  1.000E+02        1         25 -5.601E-01  7.460E-01 -3.602E-01  6.000E+00  1.000E+00  0.000E+00
+      9  0.000E+00  0.000E+00  1.000E+02        1         25 -4.817E-01  8.515E-01 -2.071E-01  6.000E+00  1.000E+00  0.000E+00
+     10  0.000E+00  0.000E+00  1.000E+02        1         25 -2.885E-01 -7.243E-01 -6.262E-01  6.000E+00  1.000E+00  0.000E+00
+     11  0.000E+00  0.000E+00  1.000E+02        1         25  7.104E-01  1.018E-01 -6.964E-01  6.000E+00  1.000E+00  0.000E+00
+     12  0.000E+00  0.000E+00  1.000E+02        1         25  7.683E-01 -2.014E-01 -6.076E-01  6.000E+00  1.000E+00  0.000E+00
+     13  0.000E+00  0.000E+00  1.000E+02        1         25  5.767E-01 -2.428E-01 -7.800E-01  6.000E+00  1.000E+00  0.000E+00
+     14  0.000E+00  0.000E+00  1.000E+02        1         25 -1.158E-01  7.406E-01 -6.619E-01  6.000E+00  1.000E+00  0.000E+00
+     15  0.000E+00  0.000E+00  1.000E+02        1         25 -8.068E-01 -5.899E-01 -3.289E-02  6.000E+00  1.000E+00  0.000E+00
+     16  0.000E+00  0.000E+00  1.000E+02        1         25  6.295E-01 -7.770E-01 -4.329E-04  6.000E+00  1.000E+00  0.000E+00
+     17  0.000E+00  0.000E+00  1.000E+02        1         25 -2.769E-01 -1.292E-01 -9.522E-01  6.000E+00  1.000E+00  0.000E+00
+     18  0.000E+00  0.000E+00  1.000E+02        1         25  6.697E-01  6.528E-01 -3.539E-01  6.000E+00  1.000E+00  0.000E+00
+     19  0.000E+00  0.000E+00  1.000E+02        1         25 -8.450E-01 -1.313E-02 -5.346E-01  6.000E+00  1.000E+00  0.000E+00
+     20  0.000E+00  0.000E+00  1.000E+02        1         25 -5.868E-01  7.940E-01 -1.590E-01  6.000E+00  1.000E+00  0.000E+00
+     21  0.000E+00  0.000E+00  1.000E+02        1         25  9.814E-01 -5.703E-02 -1.835E-01  6.000E+00  1.000E+00  0.000E+00
+     22  0.000E+00  0.000E+00  1.000E+02        1         25  8.008E-01  8.266E-02 -5.932E-01  6.000E+00  1.000E+00  0.000E+00
+     23  0.000E+00  0.000E+00  1.000E+02        1         25 -8.175E-01  5.175E-01 -2.527E-01  6.000E+00  1.000E+00  0.000E+00
+     24  0.000E+00  0.000E+00  1.000E+02        1         25  3.188E-01  8.717E-01 -3.723E-01  6.000E+00  1.000E+00  0.000E+00
+     25  0.000E+00  0.000E+00  1.000E+02        1         25 -4.859E-03 -9.606E-01 -2.777E-01  6.000E+00  1.000E+00  0.000E+00
+     26  0.000E+00  0.000E+00  1.000E+02        1         25  6.149E-01  3.601E-01 -7.016E-01  6.000E+00  1.000E+00  0.000E+00
+     27  0.000E+00  0.000E+00  1.000E+02        1         25  6.772E-01 -6.926E-01 -2.484E-01  6.000E+00  1.000E+00  0.000E+00
+     28  0.000E+00  0.000E+00  1.000E+02        1         25  4.786E-01 -1.758E-01 -8.603E-01  6.000E+00  1.000E+00  0.000E+00
+     29  0.000E+00  0.000E+00  1.000E+02        1         25 -6.802E-01  1.710E-01 -7.128E-01  6.000E+00  1.000E+00  0.000E+00
+     30  0.000E+00  0.000E+00  1.000E+02        1         25  8.937E-02  1.268E-01 -9.879E-01  6.000E+00  1.000E+00  0.000E+00
+     31  0.000E+00  0.000E+00  1.000E+02        1         25  8.493E-02  9.319E-01 -3.526E-01  6.000E+00  1.000E+00  0.000E+00
+     32  0.000E+00  0.000E+00  1.000E+02        1         25 -5.728E-01  5.329E-01 -6.228E-01  6.000E+00  1.000E+00  0.000E+00
+     33  0.000E+00  0.000E+00  1.000E+02        1         25 -7.413E-01 -2.976E-01 -6.017E-01  6.000E+00  1.000E+00  0.000E+00
+     34  0.000E+00  0.000E+00  1.000E+02        1         25  6.610E-01  7.422E-01 -1.104E-01  6.000E+00  1.000E+00  0.000E+00
+     35  0.000E+00  0.000E+00  1.000E+02        1         25  9.666E-01  1.674E-01 -1.939E-01  6.000E+00  1.000E+00  0.000E+00
+     36  0.000E+00  0.000E+00  1.000E+02        1         25 -1.933E-01  3.849E-01 -9.025E-01  6.000E+00  1.000E+00  0.000E+00
+     37  0.000E+00  0.000E+00  1.000E+02        1         25 -2.931E-02 -6.841E-02 -9.972E-01  6.000E+00  1.000E+00  0.000E+00
+     38  0.000E+00  0.000E+00  1.000E+02        1         25 -6.712E-01  6.063E-01 -4.265E-01  6.000E+00  1.000E+00  0.000E+00
+     39  0.000E+00  0.000E+00  1.000E+02        1         25 -5.266E-01 -5.071E-01 -6.823E-01  6.000E+00  1.000E+00  0.000E+00
+     40  0.000E+00  0.000E+00  1.000E+02        1         25 -4.997E-01 -3.543E-01 -7.904E-01  6.000E+00  1.000E+00  0.000E+00
+     41  0.000E+00  0.000E+00  1.000E+02        1         25 -5.644E-01  3.734E-01 -7.362E-01  6.000E+00  1.000E+00  0.000E+00
+     42  0.000E+00  0.000E+00  1.000E+02        1         25 -8.840E-02  4.606E-01 -8.832E-01  6.000E+00  1.000E+00  0.000E+00
+     43  0.000E+00  0.000E+00  1.000E+02        1         25 -2.587E-01 -9.470E-01 -1.901E-01  6.000E+00  1.000E+00  0.000E+00
+     44  0.000E+00  0.000E+00  1.000E+02        1         25  9.601E-01  1.838E-01 -2.107E-01  6.000E+00  1.000E+00  0.000E+00
+     45  0.000E+00  0.000E+00  1.000E+02        1         25 -7.547E-01  2.565E-01 -6.039E-01  6.000E+00  1.000E+00  0.000E+00
+     46  0.000E+00  0.000E+00  1.000E+02        1         25 -4.887E-01  2.109E-01 -8.466E-01  6.000E+00  1.000E+00  0.000E+00
+     47  0.000E+00  0.000E+00  1.000E+02        1         25  5.734E-01 -8.111E-01 -1.150E-01  6.000E+00  1.000E+00  0.000E+00
+     48  0.000E+00  0.000E+00  1.000E+02        1         25  9.966E-01 -2.618E-02 -7.780E-02  6.000E+00  1.000E+00  0.000E+00
+     49  0.000E+00  0.000E+00  1.000E+02        1         25 -5.848E-01  7.626E-01 -2.767E-01  6.000E+00  1.000E+00  0.000E+00
+     50  0.000E+00  0.000E+00  1.000E+02        1         25  5.490E-01 -1.006E-01 -8.297E-01  6.000E+00  1.000E+00  0.000E+00
+1problem summary                                                                                                           
+
+      run terminated when      100000  particle histories were done.
++                                                                                                    05/07/13 16:03:19 
+      Starting file for Exam #2 in NE/MP 506                                               probid =  05/07/13 16:02:56 
+0
+ photon creation     tracks      weight        energy            photon loss         tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source              100000    1.0000E+00    6.0000E+00          escape               27001    2.7001E-01    7.7591E-01
+                                                                 energy cutoff            0    0.            1.5853E-04
+                                                                 time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    0.            0.                  weight cutoff            0    0.            0.        
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ from neutrons            0    0.            0.                  compton scatter          0    0.            4.4361E+00
+ bremsstrahlung       84707    8.4707E-01    1.1043E-01          capture             188167    1.8817E+00    9.5485E-02
+ p-annihilation       34064    3.4064E-01    1.7407E-01          pair production      17032    1.7032E-01    9.7723E-01
+ photonuclear             0    0.            0.                  photonuclear abs         0    0.            0.        
+ electron x-rays          0    0.            0.                                                                        
+ 1st fluorescence     13429    1.3429E-01    4.1406E-04                                                                
+ 2nd fluorescence         0    0.            0.                                                                        
+     total           232200    2.3220E+00    6.2849E+00              total           232200    2.3220E+00    6.2849E+00
+
+   number of photons banked                   118771        average time of (shakes)              cutoffs
+   photon tracks per source particle      2.3220E+00          escape            7.5661E-01          tco   1.0000E+33
+   photon collisions per source particle  1.2619E+01          capture           8.2138E-01          eco   1.0000E-03
+   total photon collisions                   1261861          capture or escape 8.1325E-01          wc1  -5.0000E-01
+                                                              any termination   8.0315E-01          wc2  -2.5000E-01
+
+ computer time so far in this run     0.39 minutes            maximum number ever in bank         5
+ computer time in mcrun               0.39 minutes            bank overflows to backup file       0
+ source particles per minute            2.5758E+05
+ random numbers generated                 17884518            most random numbers used was         786 in history        1620
+
+ range of sampled source weights = 1.0000E+00 to 1.0000E+00
+
+ number of histories processed by each thread
+       50402       49598
+1photon   activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1      130564       109892         1543    1.5430E-02   4.3327E+00   4.3327E+00   1.0000E+00   3.0588E+04
+        2        2        8187         6114           82    8.2000E-04   2.3048E+00   2.3048E+00   1.0000E+00   1.9837E+04
+        3        3        4689         4266            9    9.0000E-05   3.0229E+00   3.0229E+00   1.0000E+00   2.3484E+04
+        4       11       70574       141911       717105    7.1711E+00   2.4221E+00   2.4221E+00   1.0000E+00   7.9483E+00
+        5       12        7302         7181        37234    3.7234E-01   1.6848E-01   1.6848E-01   1.0000E+00   2.6905E+00
+        6       13       16113        26876       128031    1.2803E+00   2.1972E+00   2.1972E+00   1.0000E+00   7.4140E+00
+        7       14       17295        28697       136803    1.3680E+00   2.1885E+00   2.1885E+00   1.0000E+00   7.3913E+00
+        8       15       15908        26036       121897    1.2190E+00   2.2276E+00   2.2276E+00   1.0000E+00   7.4682E+00
+        9       16        2224         3135        12633    1.2633E-01   2.0798E+00   2.0798E+00   1.0000E+00   7.1035E+00
+       10       17       10386        16605        75721    7.5721E-01   2.2737E+00   2.2737E+00   1.0000E+00   7.5670E+00
+       11       18        3499         5060        25021    2.5021E-01   1.8899E+00   1.8899E+00   1.0000E+00   6.8124E+00
+       12       19         639          621         2532    2.5320E-02   1.9584E-01   1.9584E-01   1.0000E+00   2.8227E+00
+       13       20         639          722         3250    3.2500E-02   1.3971E+00   1.3971E+00   1.0000E+00   1.3354E+01
+
+           total        288019       377116      1261861    1.2619E+01
+
+1tally        4        nps =      100000
++                                   Dose given to operator [mrem/h]                                            
+           tally type 4    track length estimate of particle flux.                        
+           tally for  photons  
+
+           this tally is modified by a dose function.
+
+           this tally is all multiplied by  1.00000E+06
+
+           volumes 
+                   cell:      20                                                                                   
+                         3.63247E+05
+ 
+ cell  20                                                                                                                              
+                 1.16045E-06 0.0668
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.07      yes          yes            0.01      yes         yes            increase   increase     10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                no         no         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.576E+05)*( 4.736E-02)**2 = (2.576E+05)*(2.243E-03) = 5.777E+02
+
+1tally       14        nps =      100000
++                                   Dose given to operator that passes through doorway [mrem/h]                
+           tally type 4    track length estimate of particle flux.                        
+           tally for  photons  
+           flagging cells:        3
+
+           this tally is modified by a dose function.
+
+           this tally is all multiplied by  1.00000E+06
+
+           volumes 
+                   cell:      20                                                                                   
+                         3.63247E+05
+ 
+ cell  20                                                                                                                              
+                 1.16045E-06 0.0668
+ 
+ cell  20                                                                                                                              
+ flagged tallies
+                 3.39318E-08 0.1197
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       14
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.07      yes          yes            0.01      yes         yes            increase   increase     10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                no         no         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.576E+05)*( 4.736E-02)**2 = (2.576E+05)*(2.243E-03) = 5.777E+02
+
+1tally       24        nps =      100000
++                                   Dose given to operator that passes through window [mrem/h]                 
+           tally type 4    track length estimate of particle flux.                        
+           tally for  photons  
+           flagging cells:       19
+
+           this tally is modified by a dose function.
+
+           this tally is all multiplied by  1.00000E+06
+
+           volumes 
+                   cell:      20                                                                                   
+                         3.63247E+05
+ 
+ cell  20                                                                                                                              
+                 1.16045E-06 0.0668
+ 
+ cell  20                                                                                                                              
+ flagged tallies
+                 1.65314E-09 0.6138
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       24
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.07      yes          yes            0.01      yes         yes            increase   increase     10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                no         no         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.576E+05)*( 4.736E-02)**2 = (2.576E+05)*(2.243E-03) = 5.777E+02
+
+1tally       34        nps =      100000
++                                   Dose given to operator that scatters from back wall [mrem/h]               
+           tally type 4    track length estimate of particle flux.                        
+           tally for  photons  
+           flagging cells:       15
+
+           this tally is modified by a dose function.
+
+           this tally is all multiplied by  1.00000E+06
+
+           volumes 
+                   cell:      20                                                                                   
+                         3.63247E+05
+ 
+ cell  20                                                                                                                              
+                 1.16045E-06 0.0668
+ 
+ cell  20                                                                                                                              
+ flagged tallies
+                 8.05610E-10 0.4537
+
+
+ ===================================================================================================================================
+
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally       34
+
+ tfc bin     --mean--      ---------relative error---------      ----variance of the variance----      --figure of merit--     -pdf-
+ behavior    behavior      value   decrease   decrease rate      value   decrease   decrease rate       value     behavior     slope
+
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.07      yes          yes            0.01      yes         yes            increase   increase     10.00
+ passed?        yes          yes      yes          yes             yes      yes         yes                no         no         yes
+
+ ===================================================================================================================================
+
+
+ warning.  the tally in the tally fluctuation chart bin did not pass  2 of the 10 statistical checks.
+
+ fom = (histories/minute)*(f(x) signal-to-noise ratio)**2 = (2.576E+05)*( 4.736E-02)**2 = (2.576E+05)*(2.243E-03) = 5.777E+02
+
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+
+
+ tally   result of statistical checks for the tfc bin (the first check not passed is listed) and error magnitude check for all bins
+
+        4   missed  2 of 10 tfc bin checks: the figure of merit does not appear to be a constant for the last half of the problem     
+         passed all bin error check:     1 tally bins all have relative errors less than 0.10 with no zero bins
+
+       14   missed  2 of 10 tfc bin checks: the figure of merit does not appear to be a constant for the last half of the problem     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+       24   missed  2 of 10 tfc bin checks: the figure of merit does not appear to be a constant for the last half of the problem     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+       34   missed  2 of 10 tfc bin checks: the figure of merit does not appear to be a constant for the last half of the problem     
+         missed all bin error check:     2 tally bins had     0 bins with zeros and     1 bins with relative errors exceeding 0.10
+
+
+ the 10 statistical checks are only for the tally fluctuation chart bin and do not apply to other tally bins.
+
+ warning.       4 of the     4 tally fluctuation chart bins did not pass all 10 statistical checks.
+ warning.       3 of the     4 tallies had bins with relative errors greater than recommended.
+1tally fluctuation charts                              
+
+                            tally        4                          tally       14                          tally       24
+          nps      mean     error   vov  slope    fom      mean     error   vov  slope    fom      mean     error   vov  slope    fom
+         8000   1.0394E-06 0.2511 0.0984  0.0      51   1.0394E-06 0.2511 0.0984  0.0      51   1.0394E-06 0.2511 0.0984  0.0      51
+        16000   1.1238E-06 0.1627 0.0405  0.0     118   1.1238E-06 0.1627 0.0405  0.0     118   1.1238E-06 0.1627 0.0405  0.0     118
+        24000   1.0026E-06 0.1389 0.0304  0.0     159   1.0026E-06 0.1389 0.0304  0.0     159   1.0026E-06 0.1389 0.0304  0.0     159
+        32000   1.0478E-06 0.1179 0.0221  0.0     216   1.0478E-06 0.1179 0.0221  0.0     216   1.0478E-06 0.1179 0.0221  0.0     216
+        40000   1.0483E-06 0.1062 0.0187  0.0     261   1.0483E-06 0.1062 0.0187  0.0     261   1.0483E-06 0.1062 0.0187  0.0     261
+        48000   1.0707E-06 0.0976 0.0157  0.0     304   1.0707E-06 0.0976 0.0157  0.0     304   1.0707E-06 0.0976 0.0157  0.0     304
+        56000   1.0728E-06 0.0915 0.0139  0.0     339   1.0728E-06 0.0915 0.0139  0.0     339   1.0728E-06 0.0915 0.0139  0.0     339
+        64000   1.1163E-06 0.0845 0.0118  0.0     390   1.1163E-06 0.0845 0.0118  0.0     390   1.1163E-06 0.0845 0.0118  0.0     390
+        72000   1.1317E-06 0.0784 0.0104  0.0     444   1.1317E-06 0.0784 0.0104  0.0     444   1.1317E-06 0.0784 0.0104  0.0     444
+        80000   1.1259E-06 0.0746 0.0094  0.0     483   1.1259E-06 0.0746 0.0094  0.0     483   1.1259E-06 0.0746 0.0094  0.0     483
+        88000   1.1449E-06 0.0714 0.0085 10.0     518   1.1449E-06 0.0714 0.0085 10.0     518   1.1449E-06 0.0714 0.0085 10.0     518
+        96000   1.1642E-06 0.0678 0.0076 10.0     565   1.1642E-06 0.0678 0.0076 10.0     565   1.1642E-06 0.0678 0.0076 10.0     565
+       100000   1.1604E-06 0.0668 0.0073 10.0     578   1.1604E-06 0.0668 0.0073 10.0     578   1.1604E-06 0.0668 0.0073 10.0     578
+ 
+
+                            tally       34
+          nps      mean     error   vov  slope    fom
+         8000   1.0394E-06 0.2511 0.0984  0.0      51
+        16000   1.1238E-06 0.1627 0.0405  0.0     118
+        24000   1.0026E-06 0.1389 0.0304  0.0     159
+        32000   1.0478E-06 0.1179 0.0221  0.0     216
+        40000   1.0483E-06 0.1062 0.0187  0.0     261
+        48000   1.0707E-06 0.0976 0.0157  0.0     304
+        56000   1.0728E-06 0.0915 0.0139  0.0     339
+        64000   1.1163E-06 0.0845 0.0118  0.0     390
+        72000   1.1317E-06 0.0784 0.0104  0.0     444
+        80000   1.1259E-06 0.0746 0.0094  0.0     483
+        88000   1.1449E-06 0.0714 0.0085 10.0     518
+        96000   1.1642E-06 0.0678 0.0076 10.0     565
+       100000   1.1604E-06 0.0668 0.0073 10.0     578
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file runtpe     nps =      100000     coll =        1261861     ctm =        0.39   nrn =         
+ 17884518
+
+         8 warning messages so far.
+
+
+ run terminated when      100000  particle histories were done.
+
+ computer time =    0.39 minutes
+
+ mcnp     version 5     09282010                     05/07/13 16:03:19                     probid =  05/07/13 16:02:56 
