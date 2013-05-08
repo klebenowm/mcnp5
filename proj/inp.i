@@ -34,7 +34,7 @@ c reaction tally
 fc14 Tally of the total xs reaction
 f14:n 1
 sd14 4000
-fm14 1 1 -1 $ multiply for total xs
+fm14 1E-24 1 -1 $ multiply for total xs and convert b to cm^2
 c VITAMIN-J 175Gp Structure for tally 4 and 14
 e4   1.0000100E-07 4.1399401E-07 5.3157902E-07
      6.8256003E-07 8.7642503E-07 1.1230000E-06 1.4400001E-06
