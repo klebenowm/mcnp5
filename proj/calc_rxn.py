@@ -7,15 +7,13 @@ import sys
 filename = sys.argv[1]
 # Second argument is nuclide (##AA)
 nuc = nn.zzaaam(sys.argv[2])
-# Third argument is MCNP5 reaction rate
-mcnp = sys.argv[3]
-# Fourth argument is output filename
-out = sys.argv[4]
+# Third argument is output filename
+out = sys.argv[3]
 # Read in mctal file
 with open(filename,'r') as f:
     lines = f.readlines()
 # Define block as the relevant block of text
-block = lines[44:86]
+block = lines[46:90]
 # Initialize data as empty list
 data = []
 # Cycle over all lines of the data block
@@ -24,23 +22,26 @@ for line in block:
     # and append to list of data
     line = line.split()
     for string in line:
-        data.append(string)
+        data.append(float(string))
+# Pop two values associated with total
+data.pop()
+data.pop()
 print(len(data))
 # Only retain flux values at even indices (0-indexed)
-phidata = []
-for i in np.arange(len(data)):
-    if i%2 == 0:
-        phidata.append(data[i])
-    else:
-        continue
+phidata = data[0::2]
 # Reverse phidata to get flux from high-to-low energy bins
-phidata = phidata.reverse()
+phidata.reverse()
 # Convert phidata to a numpy array
-phi = np.zeros((175,1))
+phi = np.empty((175,1))
 for i in np.arange(len(phidata)):
     phi[i,0] = phidata[i]
 # Find 175Gp reaction rate from PyNE
 rxnRate = tm._get_destruction(nuc,phi,False)
+# Find MCNP5 reaction rate
+line = lines[190]
+line = line.split()
+line.pop()
+mcnp = line.pop()
 # Write results to a file
 s  = 'Results for nuclide: ' + nn.name(nuc) + '\n'
 s += '\tMCNP5 = ' + mcnp + '\n'
