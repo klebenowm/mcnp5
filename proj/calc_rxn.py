@@ -40,12 +40,13 @@ rxnRate = tm._get_destruction(nuc,phi,False)
 # Find MCNP5 reaction rate
 line = lines[190]
 line = line.split()
-line.pop()
+merr = line.pop()
 mcnp = line.pop()
 # Write results to a file
 s  = 'Results for nuclide: ' + nn.name(nuc) + '\n'
-s += '\tMCNP5 = ' + mcnp + '\n'
 s += '\tPyNE  = ' + str(rxnRate) + '\n'
+s += '\tMCNP5 = ' + mcnp + '\n'
+s += '\t        ' + merr + '\n'
 with open(out,'a') as f:
     f.write(s)
 pass
