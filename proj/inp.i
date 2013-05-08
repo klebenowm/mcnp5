@@ -24,7 +24,7 @@ sp2 0 1
 si3 1.0000100E-07 1.9640300E+01
 sp3 0 1
 c Runtime information
-ctme 4
+ctme 8
 c Tally Information
 c flux tally
 fc4 Tally of the flux reported in VITAMIN-J 175Gp structure

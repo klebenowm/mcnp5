@@ -15,7 +15,7 @@ out = sys.argv[4]
 with open(filename,'r') as f:
     lines = f.readlines()
 # Define block as the relevant block of text
-block = lines[45:89]
+block = lines[44:86]
 # Initialize phidata as empty list
 phidata = []
 # Cycle over all lines of the data block
