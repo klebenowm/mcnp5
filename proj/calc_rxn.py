@@ -26,7 +26,6 @@ for line in block:
 # Pop two values associated with total
 data.pop()
 data.pop()
-print(len(data))
 # Only retain flux values at even indices (0-indexed)
 phidata = data[0::2]
 # Reverse phidata to get flux from high-to-low energy bins
