@@ -16,16 +16,23 @@ with open(filename,'r') as f:
     lines = f.readlines()
 # Define block as the relevant block of text
 block = lines[44:86]
-# Initialize phidata as empty list
-phidata = []
+# Initialize data as empty list
+data = []
 # Cycle over all lines of the data block
 for line in block:
     # Split each line into separate elements
-    # and append to list of phidata
+    # and append to list of data
     line = line.split()
-    phidata.append(line)
+    for string in line:
+        data.append(string)
+print(len(data))
 # Only retain flux values at even indices (0-indexed)
-phidata = [x for x in phidata if x%2 == 0]
+phidata = []
+for i in np.arange(len(data)):
+    if i%2 == 0:
+        phidata.append(data[i])
+    else:
+        continue
 # Reverse phidata to get flux from high-to-low energy bins
 phidata = phidata.reverse()
 # Convert phidata to a numpy array
@@ -40,4 +47,4 @@ s += '\tMCNP5 = ' + mcnp + '\n'
 s += '\tPyNE  = ' + str(rxnRate) + '\n'
 with open(out,'a') as f:
     f.write(s)
-return
+pass
