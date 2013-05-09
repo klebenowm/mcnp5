@@ -1,0 +1,76 @@
+Results for nuclide: FE56 (260560)
+	PyNE  = 6.2620818075e-28
+	MCNP5 = 8.53798E-27
+	        0.0001
+Results for nuclide: FE57 (260570)
+	PyNE  = 1.25817551046e-27
+	MCNP5 = 9.44787E-27
+	        0.0001
+Results for nuclide: MN55 (250550)
+	PyNE  = 8.27792864954e-28
+	MCNP5 = 9.53345E-27
+	        0.0001
+Results for nuclide: FE58 (260580)
+	PyNE  = 9.05902953379e-28
+	MCNP5 = 9.35503E-27
+	        0.0001
+Results for nuclide: CR54 (240540)
+	PyNE  = 1.02933212363e-27
+	MCNP5 = 9.46158E-27
+	        0.0001
+Results for nuclide: CR52 (240520)
+	PyNE  = 5.03565589863e-28
+	MCNP5 = 8.68040E-27
+	        0.0001
+Results for nuclide: FE54 (260540)
+	PyNE  = 9.26147200144e-28
+	MCNP5 = 2.10956E-28
+	        0.0007
+Results for nuclide: CO59 (270590)
+	PyNE  = 4.7952957765e-28
+	MCNP5 = 9.66114E-27
+	        0.0001
+Results for nuclide: V51 (230510)
+	PyNE  = 6.28843686487e-28
+	MCNP5 = 9.64913E-27
+	        0.0002
+Results for nuclide: TI50 (220500)
+	PyNE  = 6.11717571844e-28
+	MCNP5 = 9.36019E-27
+	        0.0001
+Results for nuclide: NI60 (280600)
+	PyNE  = 6.31690186502e-28
+	MCNP5 = 2.33521E-28
+	        0.0007
+Results for nuclide: TI49 (220490)
+	PyNE  = 1.00193428196e-27
+	MCNP5 = 176
+	        1
+Results for nuclide: NI61 (280610)
+	PyNE  = 9.40481316212e-28
+	MCNP5 = 9.63490E-27
+	        0.0001
+Results for nuclide: CO58 (270580)
+	PyNE  = 2.39165919694e-27
+	MCNP5 = 9.44896E-27
+	        0.0001
+Results for nuclide: NI59 (280590)
+	PyNE  = 1.88634069439e-27
+	MCNP5 = 2.57465E-04
+	        1.02608E+07
+Results for nuclide: TI47 (220470)
+	PyNE  = 7.21408537166e-28
+	MCNP5 = 8.23421E-27
+	        0.0001
+Results for nuclide: CR50 (240500)
+	PyNE  = 5.30643019723e-28
+	MCNP5 = 8.33106E-27
+	        0.0001
+Results for nuclide: TI48 (220480)
+	PyNE  = 5.2223537752e-28
+	MCNP5 = 8.51288E-27
+	        0.0002
+Results for nuclide: CA46 (200460)
+	PyNE  = 6.77511595177e-28
+	MCNP5 = 9.27716E-27
+	        0.0001
