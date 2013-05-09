@@ -45,7 +45,7 @@ mcnp = line.pop()
 s  = 'Results for nuclide: ' + nn.name(nuc) + ' (' + str(nuc) + ')\n'
 s += '\tPyNE  : ' + str(rxnRate) + '\n'
 s += '\tMCNP5 : ' + mcnp + '\n'
-s += '\t        ' + merr + '\n'
+s += '\t      : ' + merr + '\n'
 with open(out,'a') as f:
     f.write(s)
 pass
