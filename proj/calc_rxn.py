@@ -42,7 +42,7 @@ line = line.split()
 merr = line.pop()
 mcnp = line.pop()
 # Write results to a file
-s  = 'Results for nuclide: ' + nn.name(nuc) + '\n'
+s  = 'Results for nuclide: ' + nn.name(nuc) + ' (' + str(nuc) + ')\n'
 s += '\tPyNE  = ' + str(rxnRate) + '\n'
 s += '\tMCNP5 = ' + mcnp + '\n'
 s += '\t        ' + merr + '\n'
