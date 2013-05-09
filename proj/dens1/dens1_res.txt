@@ -1,0 +1,16 @@
+Results for nuclide: FE56 (260560)
+	PyNE  : 7.50385859788e-29
+	MCNP5 : 5.68414E-27
+            0.0009
+Results for nuclide: FE57 (260570)
+	PyNE  : 2.24477207216e-28
+	MCNP5 : 1.34794E-26
+	      : 0.0010
+Results for nuclide: MN55 (250550)
+	PyNE  : 2.29709882575e-28
+	MCNP5 : 1.30079E-26
+	      : 0.0010
+Results for nuclide: FE58 (260580)
+	PyNE  : 9.59889897388e-29
+	MCNP5 : 1.20211E-29
+	      : 0.0061
